@@ -6,16 +6,45 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 struct ContentView: View {
+    @State var selectedTab = 0
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView(selection: $selectedTab) {
+            Text("Homepage")
+                .tabItem {
+                    Image(systemName: "house")
+                    Text("Home")
+                }
+                .tag(0)
+            Text("Saved Programs")
+                .tabItem {
+                    Image(systemName: "bookmark")
+                    Text("Saved")
+                }
+                .tag(1)
+            Text("Add a New Program")
+                .tabItem {
+                    Image(systemName: "plus.app")
+                    Text("Add")
+                }
+                .tag(2)
+            Text("Notifications")
+                .tabItem {
+                    Image(systemName: "bell")
+                    Text("Alerts")
+                }
+                .tag(3)
+            Text("Edit Profile")
+                .tabItem {
+                    Image(systemName: "person.crop.circle")
+                    Text("Profile")
+                }
+                .tag(4)
+            
         }
-        .padding()
     }
 }
 
