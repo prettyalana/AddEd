@@ -12,15 +12,7 @@ struct ContentView: View {
     @State private var jobSearchedValue: String = ""
 
     var body: some View {
-        VStack {
-            TextField("Job Search", text: $jobSearchedValue)
-                .background()
-            
-            Spacer()
-            
-            
-        }
-        .padding()
+        HomeScreen()
     }
 }
 

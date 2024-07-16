@@ -8,12 +8,17 @@
 import SwiftUI
 
 struct HomeScreen: View {
-    @State private var jobSearchedValue: String = ""
+    @State var jobSearchedValue: String = ""
+    @State var foundJobs: [Program] = []
     var body: some View {
         VStack {
-            Rectangle()
-                .fill(.green)
-                .frame(width:UIScreen.main.bounds.width, height:100)
+            ZStack {
+                Rectangle()
+                    .fill(.green)
+                    .frame(width:UIScreen.main.bounds.width, height:90)
+                //insert logo here
+            }
+            
             ZStack {
                 Rectangle()
                     .fill(.white)
@@ -24,23 +29,39 @@ struct HomeScreen: View {
                     TextField("Job Search", text: $jobSearchedValue)
                         .padding([.leading, .trailing], 30.0)
                         .frame(alignment:.leading)
-                    Button (action: {searchFunction(query:jobSearchedValue)}, label: {
+                    
+                    Button (action: {foundJobs = searchFunction( query:jobSearchedValue)}, label: {
                         Label("", systemImage:"magnifyingglass")
-                    }
-                    )
+                    })
                     .foregroundColor(.black)
                     .frame(width: 20, height: 20)
                     .padding([.trailing], 30.0)
-                    
                 }
-                
-                    
             }
             
+            HStack {
+                Text("Featured")
+                    .bold()
+                    .font(.system(size:24))
+                    .padding([.leading], 6.0)
+            }
+            .frame(width: UIScreen.main.bounds.width-20, height: 60, alignment:.leading)
+            .background(.white)
+            .cornerRadius(8)
             
-            Text("Featured")
-                .bold()
-                .multilineTextAlignment(.leading)
+            
+            
+            //Horizontal scrolling cards
+            
+            HStack {
+                Text("Recommended Programs")
+                    .bold()
+                    .font(.system(size:24))
+                    .padding([.leading], 6.0)
+            }
+            .frame(width: UIScreen.main.bounds.width-20, height: 60, alignment:.leading)
+            .background(.white)
+            .cornerRadius(8)
             
             Spacer()
         }

@@ -9,11 +9,10 @@ import Foundation
 
 var programNames: [String] = []
 
-
-func searchFunction(query: String) -> [String] {
-    var returnedArray: [String] = []
-    for i in programNames {
-        if i.contains(query) {
+func searchFunction(query: String) -> [Program] {
+    var returnedArray: [Program] = []
+    for i in placeholderPrograms {
+        if i.name.contains(query) {
             returnedArray.append(i)
         }
     }

@@ -14,12 +14,6 @@ struct TagRectangleView: View {
     var body: some View {
         if removable {
             HStack {
-//                Text(displayTag.name)
-//                    .foregroundColor(Color.white)
-//                    .multilineTextAlignment(.center)
-//                    .padding(.all, 6.0)
-//                    .background(displayTag.getTypeColor())
-//                    .cornerRadius(8)
                 Button(action: {itemTagged.removeTag(inputTag: displayTag)}, 
                        label: {
                     HStack {
@@ -27,7 +21,6 @@ struct TagRectangleView: View {
                         Image(systemName:"x.circle")
                     }
                     .padding(3.0)
-                    //Label(displayTag.name, systemImage:"x.circle")
                 })
                     .background(displayTag.getTypeColor())
                     .cornerRadius(8)
