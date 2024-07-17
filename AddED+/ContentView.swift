@@ -31,7 +31,7 @@ struct ContentView: View {
                     Text("Add")
                 }
                 .tag(2)
-            Text("Notifications")
+            Notifications()
                 .tabItem {
                     Image(systemName: "bell")
                     Text("Alerts")
@@ -48,6 +48,18 @@ struct ContentView: View {
     }
 }
 
-#Preview {
-    ContentView()
+struct HomeView: View {
+    var body: some View {
+        ScrollView {
+            VStack {
+                ForEach(Program.sampleData, id: \.name) { program in
+                    Text(program.name)
+                }
+            }
+        }
+    }
 }
+
+#preview {
+    ContentView()
+ }
