@@ -12,6 +12,7 @@ struct HomeScreen: View {
     @State var foundJobs: [Program] = []
     var body: some View {
         VStack {
+            //Top green bar
             ZStack {
                 Rectangle()
                     .fill(.green)
@@ -19,12 +20,14 @@ struct HomeScreen: View {
                 //insert logo here
             }
             
+            //Searching bar
             ZStack {
+                //Search bar background
                 Rectangle()
                     .fill(.white)
                     .frame(width: UIScreen.main.bounds.width - 40, height: 40)
                     .cornerRadius(10)
-                
+                //Search bar functionality and button
                 HStack {
                     TextField("Job Search", text: $jobSearchedValue)
                         .padding([.leading, .trailing], 30.0)
@@ -39,6 +42,7 @@ struct HomeScreen: View {
                 }
             }
             
+            //Featured programs title
             HStack {
                 Text("Featured")
                     .bold()
@@ -49,6 +53,7 @@ struct HomeScreen: View {
             .background(.white)
             .cornerRadius(8)
             
+            //Scroll through all featured programs (currently hardcoded)
             ScrollView(.horizontal) {
                 HStack {
                     ProgramCardView(displayedProgram: ECCChicago, areTagsRemovable: true)
@@ -56,10 +61,8 @@ struct HomeScreen: View {
                 }
                 
             }
-//            ProgramCardView(displayedProgram: ECCChicago, areTagsRemovable: true)
             
-            //Horizontal scrolling cards
-            
+            //Recommended Programs Title
             HStack {
                 Text("Recommended Programs")
                     .bold()

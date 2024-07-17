@@ -70,6 +70,7 @@ struct User {
     var interests: [String]
     var email: String
     var password: String
+    var savedPrograms: [Program]
 }
 
 class Tag: Identifiable {
