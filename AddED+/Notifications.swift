@@ -13,12 +13,6 @@ struct Notifications: View {
     }
 }
 
-struct Notification_Previews: PreviewProvider {
-    static var previews: some View {
-        Notifications()
-    }
+#Preview {
+    NotificationsView()
 }
-
-//#Preview {
-//    NotificationsView()
-//}
