@@ -31,16 +31,11 @@ struct ContentView: View {
                     Text("Add")
                 }
                 .tag(2)
-            Notifications()
+            Text("Search")
                 .tabItem {
-                    Image(systemName: "bell")
-                    Text("Alerts")
+                    Image(systemName: "magnifyingglass")
+                    Text("Search")
                 }
-//            Search()
-//                .tabItem {
-//                    Image(systemName: "magnifyingglass")
-//                    Text("Search")
-//                }
                 .tag(3)
             Text("Edit Profile")
                 .tabItem {
