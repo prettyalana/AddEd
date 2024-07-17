@@ -13,7 +13,7 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            Text("Homepage")
+            Home()
                 .tabItem {
                     Image(systemName: "house")
                     Text("Home")
@@ -31,10 +31,10 @@ struct ContentView: View {
                     Text("Add")
                 }
                 .tag(2)
-            Text("Notifications")
+            Text("Search")
                 .tabItem {
-                    Image(systemName: "bell")
-                    Text("Alerts")
+                    Image(systemName: "magnifyingglass")
+                    Text("Search")
                 }
                 .tag(3)
             Text("Edit Profile")
@@ -50,4 +50,4 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-}
+ }
