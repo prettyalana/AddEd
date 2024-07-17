@@ -14,5 +14,5 @@ struct Notifications: View {
 }
 
 #Preview {
-    NotificationsView()
+    Notifications()
 }

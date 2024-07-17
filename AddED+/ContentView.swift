@@ -60,6 +60,6 @@ struct HomeView: View {
     }
 }
 
-#preview {
+#Preview {
     ContentView()
  }
