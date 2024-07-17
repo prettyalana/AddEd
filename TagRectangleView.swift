@@ -20,7 +20,7 @@ struct TagRectangleView: View {
                         Text(displayTag.name)
                         Image(systemName:"x.circle")
                     }
-                    .padding(3.0)
+                    .padding(6.0)
                 })
                     .background(displayTag.getTypeColor())
                     .cornerRadius(8)

@@ -49,7 +49,14 @@ struct HomeScreen: View {
             .background(.white)
             .cornerRadius(8)
             
-            
+            ScrollView(.horizontal) {
+                HStack {
+                    ProgramCardView(displayedProgram: ECCChicago, areTagsRemovable: true)
+                    ProgramCardView(displayedProgram: ECCChicago, areTagsRemovable: true)
+                }
+                
+            }
+//            ProgramCardView(displayedProgram: ECCChicago, areTagsRemovable: true)
             
             //Horizontal scrolling cards
             

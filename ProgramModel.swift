@@ -31,7 +31,7 @@ class Program: Identifiable {
         place = inputPlace
         verified = false
         ratings = []
-        tags = []
+        tags = [technologyTag, paidTag]
     }
     
     func addTag(inputTag: Tag) {
@@ -52,6 +52,14 @@ class Program: Identifiable {
     
     func toggleVerify() {
         verified.toggle()
+    }
+    
+    func ratingsAverageScore() -> Int {
+        var sum = 0
+        for i in ratings {
+            sum += i.starCount
+        }
+        return sum
     }
     
 }

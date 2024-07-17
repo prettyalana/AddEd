@@ -17,23 +17,41 @@ struct ProgramCardView: View {
                 .frame(width: 200, height: 150)
                 .cornerRadius(10)
                 .shadow(color: Color.black, radius:5, y:5)
-            VStack {
-                HStack {
+            VStack(alignment: .leading) {
+                HStack(alignment: .top) {
                     Text(displayedProgram.name)
+                        .font(.system(size:20))
                     if displayedProgram.verified {
                         Image(systemName: "checkmark.circle")
                             .font(.system(size: 30, weight:.bold))
                             .foregroundColor(.green)
                     }
                 }
+                
                 .frame(maxWidth:200, maxHeight:20)
+                .padding()
                 ScrollView(.horizontal) {
-                    ForEach(displayedProgram.tags) { tag in
-                        TagRectangleView(displayTag: tag, removable: areTagsRemovable, itemTagged: displayedProgram)
+                    HStack {
+                        ForEach(displayedProgram.tags) { tag in
+                            TagRectangleView(displayTag: tag, removable: areTagsRemovable, itemTagged: displayedProgram)
+                        }
                     }
                 }
-                
-                
+                .padding(.leading, 16.0)
+                .frame(maxWidth:200, maxHeight: 20)
+                HStack {
+                    Image(systemName:"star.fill")
+                        .frame(alignment:.trailing)
+                        .foregroundColor(.yellow)
+                        .font(.system(size:25))
+                    Text("(" + String(displayedProgram.ratingsAverageScore()) + ")")
+                        .foregroundColor(.yellow)
+                        .bold()
+                        .font(.system(size: 24))
+                    
+                }
+                .frame(alignment:.leading)
+                .padding()
                 
                 
             }
