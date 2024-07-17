@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E70427462C4770E700053C6E /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70427452C4770E700053C6E /* Home.swift */; };
+		E704274B2C47861E00053C6E /* FeaturedPrograms.swift in Sources */ = {isa = PBXBuildFile; fileRef = E704274A2C47861E00053C6E /* FeaturedPrograms.swift */; };
 		E7BD348E2C4106FB00BDA300 /* AddED_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BD348D2C4106FB00BDA300 /* AddED_App.swift */; };
 		E7BD34902C4106FB00BDA300 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BD348F2C4106FB00BDA300 /* ContentView.swift */; };
 		E7BD34922C4106FD00BDA300 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7BD34912C4106FD00BDA300 /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E70427452C4770E700053C6E /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		E704274A2C47861E00053C6E /* FeaturedPrograms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedPrograms.swift; sourceTree = "<group>"; };
 		E7BD348A2C4106FB00BDA300 /* AddED+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AddED+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7BD348D2C4106FB00BDA300 /* AddED_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddED_App.swift; sourceTree = "<group>"; };
 		E7BD348F2C4106FB00BDA300 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +40,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E70427472C47739700053C6E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E7BD348F2C4106FB00BDA300 /* ContentView.swift */,
+				E70427452C4770E700053C6E /* Home.swift */,
+				E704274A2C47861E00053C6E /* FeaturedPrograms.swift */,
+				E7DD39F52C46FFD10037A34D /* Notifications.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E7BD34812C4106FB00BDA300 = {
 			isa = PBXGroup;
 			children = (
@@ -55,10 +70,9 @@
 		E7BD348C2C4106FB00BDA300 /* AddED+ */ = {
 			isa = PBXGroup;
 			children = (
-				E7FCF78D2C473CA300B1B2E7 /* Models */,
 				E7BD348D2C4106FB00BDA300 /* AddED_App.swift */,
-				E7BD348F2C4106FB00BDA300 /* ContentView.swift */,
-				E7DD39F52C46FFD10037A34D /* Notifications.swift */,
+				E7FCF78D2C473CA300B1B2E7 /* Models */,
+				E70427472C47739700053C6E /* Views */,
 				E7BD34912C4106FD00BDA300 /* Assets.xcassets */,
 				E7BD34932C4106FD00BDA300 /* Preview Content */,
 			);
@@ -153,8 +167,10 @@
 			files = (
 				E7FCF78F2C473CBB00B1B2E7 /* Program.swift in Sources */,
 				E7BD34902C4106FB00BDA300 /* ContentView.swift in Sources */,
+				E70427462C4770E700053C6E /* Home.swift in Sources */,
 				E7BD348E2C4106FB00BDA300 /* AddED_App.swift in Sources */,
 				E7DD39F62C46FFD10037A34D /* Notifications.swift in Sources */,
+				E704274B2C47861E00053C6E /* FeaturedPrograms.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

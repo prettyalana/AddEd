@@ -13,7 +13,7 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            Text("Homepage")
+            Home()
                 .tabItem {
                     Image(systemName: "house")
                     Text("Home")
@@ -36,6 +36,11 @@ struct ContentView: View {
                     Image(systemName: "bell")
                     Text("Alerts")
                 }
+//            Search()
+//                .tabItem {
+//                    Image(systemName: "magnifyingglass")
+//                    Text("Search")
+//                }
                 .tag(3)
             Text("Edit Profile")
                 .tabItem {
@@ -44,18 +49,6 @@ struct ContentView: View {
                 }
                 .tag(4)
             
-        }
-    }
-}
-
-struct HomeView: View {
-    var body: some View {
-        ScrollView {
-            VStack {
-                ForEach(Program.sampleData, id: \.name) { program in
-                    Text(program.name)
-                }
-            }
         }
     }
 }
