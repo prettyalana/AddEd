@@ -10,13 +10,16 @@ import SwiftUI
 struct ProgramCardView: View {
     @State var displayedProgram: Program
     @State var areTagsRemovable: Bool
+    @State var paddingAmount: Double
+    
     var body: some View {
         ZStack {
             Rectangle()
                 .fill(.white)
                 .frame(width: 200, height: 150)
                 .cornerRadius(10)
-                .shadow(color: Color.black, radius:5, y:5)
+                .shadow(color: Color(red: 0.4, green: 0.4, blue: 0.4), radius:5, y:5)
+                .padding()
             VStack(alignment: .leading) {
                 HStack(alignment: .top) {
                     Text(displayedProgram.name)
@@ -27,9 +30,10 @@ struct ProgramCardView: View {
                             .foregroundColor(.green)
                     }
                 }
+                .frame(maxWidth:180, maxHeight:20)
+                .padding([.top, .leading, .bottom], 5)
                 
-                .frame(maxWidth:200, maxHeight:20)
-                .padding()
+                
                 ScrollView(.horizontal) {
                     HStack {
                         ForEach(displayedProgram.tags) { tag in
@@ -37,7 +41,7 @@ struct ProgramCardView: View {
                         }
                     }
                 }
-                .padding(.leading, 16.0)
+                .padding(.leading, paddingAmount)
                 .frame(maxWidth:200, maxHeight: 20)
                 HStack {
                     Image(systemName:"star.fill")
@@ -60,5 +64,5 @@ struct ProgramCardView: View {
 }
 
 #Preview {
-    ProgramCardView(displayedProgram: ECCChicago, areTagsRemovable:true)
+    ProgramCardView(displayedProgram: afterSchoolMatters, areTagsRemovable: false, paddingAmount: 10.0)
 }

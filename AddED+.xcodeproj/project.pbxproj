@@ -53,6 +53,7 @@
 		E70427472C47739700053C6E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F64316762C49A48C00E9FC81 /* ProgramPage.swift */,
 				E7BD348F2C4106FB00BDA300 /* ContentView.swift */,
 				E7DA68422C49BD4D000C7486 /* TabBar.swift */,
 				E7DA68322C49A8D3000C7486 /* HomeScreen.swift */,
@@ -85,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				E7BD348D2C4106FB00BDA300 /* AddED_App.swift */,
+				F600EF2F2C49A2120034AF79 /* SearchFunction.swift */,
 				E7FCF78D2C473CA300B1B2E7 /* Models */,
 				E70427472C47739700053C6E /* Views */,
 				E7BD34912C4106FD00BDA300 /* Assets.xcassets */,
@@ -324,7 +326,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AddED+/Preview Content\"";
-				DEVELOPMENT_TEAM = BFUV573K7L;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -354,7 +356,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AddED+/Preview Content\"";
-				DEVELOPMENT_TEAM = BFUV573K7L;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
