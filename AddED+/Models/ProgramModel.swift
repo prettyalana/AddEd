@@ -97,7 +97,8 @@ let technologyTag = Tag(inputName: "Technology", inputType: "Tech")
 let paidTag = Tag(inputName: "Paid Internship", inputType: "")
 
 var ECCChicago = Program(inputName: "Everyone Can Code Chicago", inputDescription: "Coding course for high school and college", inputTime: "2:00 PM - 5:00 PM", inputDays: "Weekdays 06/24/2024-8/02/2024", inputPlace: "Truman College")
+var afterSchoolMatters = Program(inputName: "After School Matters", inputDescription: "After School Matters inspires Chicago’s teens to discover their passions, develop skills for life beyond high school, and make friends along the way.", inputTime: "", inputDays: "07/16/2024-07/16/2025", inputPlace: "Chicago, Il")
 
-var placeholderPrograms: [Program] = [ECCChicago]
-var placeholderFeaturedPrograms: [Program] = [ECCChicago]
+var placeholderPrograms: [Program] = [ECCChicago, afterSchoolMatters]
+var placeholderFeaturedPrograms: [Program] = [ECCChicago, afterSchoolMatters]
 

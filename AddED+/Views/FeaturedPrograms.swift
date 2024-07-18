@@ -16,7 +16,7 @@ struct FeaturedPrograms: View {
         .padding(.leading, 15)
         ScrollView(.horizontal) {
             HStack {
-                    ForEach(Program.sampleData, id: \.name) { program in
+                    ForEach(placeholderPrograms, id: \.name) { program in
                         Text(program.name)
                     }
                     .frame(width: 300, height: 200)
