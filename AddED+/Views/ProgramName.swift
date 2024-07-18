@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct programName: View {
+struct ProgramName: View {
     @State var programName: String = ""
     var body: some View {
         TextField("Program Name", text:$programName)
@@ -17,5 +17,5 @@ struct programName: View {
 }
 
 #Preview {
-    programName()
+    ProgramName()
 }

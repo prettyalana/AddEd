@@ -50,7 +50,7 @@ struct ProgramCardView: View {
                         .font(.system(size: 24))
                     
                 }
-                .padding(.all, 20.0)
+                .padding(.all, 10.0)
                 
                 
             }

@@ -7,26 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E70427462C4770E700053C6E /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70427452C4770E700053C6E /* Home.swift */; };
-		E704274B2C47861E00053C6E /* FeaturedPrograms.swift in Sources */ = {isa = PBXBuildFile; fileRef = E704274A2C47861E00053C6E /* FeaturedPrograms.swift */; };
+		E7B6E42F2C49A2320038DEEE /* ProgramModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B6E42E2C49A2320038DEEE /* ProgramModel.swift */; };
 		E7BD348E2C4106FB00BDA300 /* AddED_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BD348D2C4106FB00BDA300 /* AddED_App.swift */; };
 		E7BD34902C4106FB00BDA300 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BD348F2C4106FB00BDA300 /* ContentView.swift */; };
 		E7BD34922C4106FD00BDA300 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7BD34912C4106FD00BDA300 /* Assets.xcassets */; };
 		E7BD34952C4106FD00BDA300 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7BD34942C4106FD00BDA300 /* Preview Assets.xcassets */; };
-		E7DD39F62C46FFD10037A34D /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DD39F52C46FFD10037A34D /* Notifications.swift */; };
-		E7FCF78F2C473CBB00B1B2E7 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FCF78E2C473CBB00B1B2E7 /* Program.swift */; };
+		E7DA68332C49A8D3000C7486 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA68322C49A8D3000C7486 /* HomeScreen.swift */; };
+		E7DA68352C49A91F000C7486 /* ProgramCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA68342C49A91F000C7486 /* ProgramCardView.swift */; };
+		E7DA68372C49A991000C7486 /* TagRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA68362C49A991000C7486 /* TagRectangleView.swift */; };
+		E7DA68392C49AA98000C7486 /* SearchFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA68382C49AA98000C7486 /* SearchFunction.swift */; };
+		E7DA683D2C49AC0E000C7486 /* ProgramPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA683C2C49AC0E000C7486 /* ProgramPage.swift */; };
+		E7DA683F2C49AC22000C7486 /* ProgramName.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA683E2C49AC22000C7486 /* ProgramName.swift */; };
+		E7DA68412C49AC28000C7486 /* ProgramInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA68402C49AC28000C7486 /* ProgramInfo.swift */; };
+		E7DA68432C49BD4D000C7486 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA68422C49BD4D000C7486 /* TabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E70427452C4770E700053C6E /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		E704274A2C47861E00053C6E /* FeaturedPrograms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedPrograms.swift; sourceTree = "<group>"; };
+		E7B6E42E2C49A2320038DEEE /* ProgramModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramModel.swift; sourceTree = "<group>"; };
 		E7BD348A2C4106FB00BDA300 /* AddED+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AddED+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7BD348D2C4106FB00BDA300 /* AddED_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddED_App.swift; sourceTree = "<group>"; };
 		E7BD348F2C4106FB00BDA300 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E7BD34912C4106FD00BDA300 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7BD34942C4106FD00BDA300 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E7DD39F52C46FFD10037A34D /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
-		E7FCF78E2C473CBB00B1B2E7 /* Program.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
+		E7DA68322C49A8D3000C7486 /* HomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		E7DA68342C49A91F000C7486 /* ProgramCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramCardView.swift; sourceTree = "<group>"; };
+		E7DA68362C49A991000C7486 /* TagRectangleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagRectangleView.swift; sourceTree = "<group>"; };
+		E7DA68382C49AA98000C7486 /* SearchFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFunction.swift; sourceTree = "<group>"; };
+		E7DA683C2C49AC0E000C7486 /* ProgramPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramPage.swift; sourceTree = "<group>"; };
+		E7DA683E2C49AC22000C7486 /* ProgramName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramName.swift; sourceTree = "<group>"; };
+		E7DA68402C49AC28000C7486 /* ProgramInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramInfo.swift; sourceTree = "<group>"; };
+		E7DA68422C49BD4D000C7486 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,9 +54,13 @@
 			isa = PBXGroup;
 			children = (
 				E7BD348F2C4106FB00BDA300 /* ContentView.swift */,
-				E70427452C4770E700053C6E /* Home.swift */,
-				E704274A2C47861E00053C6E /* FeaturedPrograms.swift */,
-				E7DD39F52C46FFD10037A34D /* Notifications.swift */,
+				E7DA68422C49BD4D000C7486 /* TabBar.swift */,
+				E7DA68322C49A8D3000C7486 /* HomeScreen.swift */,
+				E7DA683C2C49AC0E000C7486 /* ProgramPage.swift */,
+				E7DA683E2C49AC22000C7486 /* ProgramName.swift */,
+				E7DA68402C49AC28000C7486 /* ProgramInfo.swift */,
+				E7DA68342C49A91F000C7486 /* ProgramCardView.swift */,
+				E7DA68362C49A991000C7486 /* TagRectangleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -74,6 +88,7 @@
 				E7FCF78D2C473CA300B1B2E7 /* Models */,
 				E70427472C47739700053C6E /* Views */,
 				E7BD34912C4106FD00BDA300 /* Assets.xcassets */,
+				E7DA68382C49AA98000C7486 /* SearchFunction.swift */,
 				E7BD34932C4106FD00BDA300 /* Preview Content */,
 			);
 			path = "AddED+";
@@ -90,7 +105,7 @@
 		E7FCF78D2C473CA300B1B2E7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E7FCF78E2C473CBB00B1B2E7 /* Program.swift */,
+				E7B6E42E2C49A2320038DEEE /* ProgramModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -165,12 +180,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7FCF78F2C473CBB00B1B2E7 /* Program.swift in Sources */,
+				E7DA68412C49AC28000C7486 /* ProgramInfo.swift in Sources */,
 				E7BD34902C4106FB00BDA300 /* ContentView.swift in Sources */,
-				E70427462C4770E700053C6E /* Home.swift in Sources */,
+				E7DA683D2C49AC0E000C7486 /* ProgramPage.swift in Sources */,
+				E7DA683F2C49AC22000C7486 /* ProgramName.swift in Sources */,
+				E7DA68332C49A8D3000C7486 /* HomeScreen.swift in Sources */,
 				E7BD348E2C4106FB00BDA300 /* AddED_App.swift in Sources */,
-				E7DD39F62C46FFD10037A34D /* Notifications.swift in Sources */,
-				E704274B2C47861E00053C6E /* FeaturedPrograms.swift in Sources */,
+				E7DA68352C49A91F000C7486 /* ProgramCardView.swift in Sources */,
+				E7DA68372C49A991000C7486 /* TagRectangleView.swift in Sources */,
+				E7DA68432C49BD4D000C7486 /* TabBar.swift in Sources */,
+				E7B6E42F2C49A2320038DEEE /* ProgramModel.swift in Sources */,
+				E7DA68392C49AA98000C7486 /* SearchFunction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
