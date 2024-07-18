@@ -56,10 +56,11 @@ struct HomeScreen: View {
             //Scroll through all featured programs (currently hardcoded)
             ScrollView(.horizontal) {
                 HStack {
-                    ProgramCardView(displayedProgram: ECCChicago, areTagsRemovable: true)
-                    ProgramCardView(displayedProgram: ECCChicago, areTagsRemovable: true)
+                    ForEach(placeholderFeaturedPrograms) {
+                        featuredProgram in
+                        ProgramCardView(displayedProgram: featuredProgram, areTagsRemovable: false, paddingAmount: 10.0)
+                    }
                 }
-                
             }
             
             //Recommended Programs Title
@@ -77,6 +78,14 @@ struct HomeScreen: View {
         }
         .background(Color(red: 0.8705, green: 0.8705, blue: 0.8705))
         .ignoresSafeArea()
+    }
+}
+
+extension HomeScreen {
+    func searchPrograms() async {
+        for i in 0...placeholderPrograms.count {
+            ProgramCardView(displayedProgram: placeholderPrograms[i], areTagsRemovable: false, paddingAmount: 20.0)
+        }
     }
 }
 

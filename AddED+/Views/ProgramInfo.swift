@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct programInfo: View {
+struct ProgramInfo: View {
     @State var description: String = ""
     @State var time: String = ""
     @State var days: String = ""
@@ -50,5 +50,5 @@ struct programInfo: View {
 }
 
 #Preview {
-    programInfo()
+    ProgramInfo()
 }

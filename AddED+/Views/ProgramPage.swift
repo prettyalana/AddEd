@@ -7,7 +7,7 @@
 
 
 import SwiftUI
-struct ContentView: View {
+struct ProgramPage: View {
     
     
     var body: some View {
@@ -38,9 +38,9 @@ struct ContentView: View {
             }
             Spacer()
                 .frame(height:20)
-            programName()
+            ProgramName()
         }
-        programInfo()
+        ProgramInfo()
             .padding()
         Spacer()
             .frame(height:450)
@@ -51,5 +51,5 @@ struct ContentView: View {
 
 
 #Preview {
-    ContentView()
+    ProgramPage()
 }

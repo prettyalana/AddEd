@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E70427462C4770E700053C6E /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70427452C4770E700053C6E /* Home.swift */; };
-		E704274B2C47861E00053C6E /* FeaturedPrograms.swift in Sources */ = {isa = PBXBuildFile; fileRef = E704274A2C47861E00053C6E /* FeaturedPrograms.swift */; };
+		E7B6E42F2C49A2320038DEEE /* ProgramModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B6E42E2C49A2320038DEEE /* ProgramModel.swift */; };
 		E7BD348E2C4106FB00BDA300 /* AddED_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BD348D2C4106FB00BDA300 /* AddED_App.swift */; };
 		E7BD34902C4106FB00BDA300 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BD348F2C4106FB00BDA300 /* ContentView.swift */; };
 		E7BD34922C4106FD00BDA300 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7BD34912C4106FD00BDA300 /* Assets.xcassets */; };
@@ -23,8 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E70427452C4770E700053C6E /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		E704274A2C47861E00053C6E /* FeaturedPrograms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedPrograms.swift; sourceTree = "<group>"; };
+		E7B6E42E2C49A2320038DEEE /* ProgramModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramModel.swift; sourceTree = "<group>"; };
 		E7BD348A2C4106FB00BDA300 /* AddED+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AddED+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7BD348D2C4106FB00BDA300 /* AddED_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddED_App.swift; sourceTree = "<group>"; };
 		E7BD348F2C4106FB00BDA300 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +51,7 @@
 		E70427472C47739700053C6E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F64316762C49A48C00E9FC81 /* ProgramPage.swift */,
 				E7BD348F2C4106FB00BDA300 /* ContentView.swift */,
 				E70427452C4770E700053C6E /* Home.swift */,
 				F0A9CB392C49A3FD004B509A /* ProgramView.swift */,
@@ -89,6 +88,7 @@
 				E7FCF78D2C473CA300B1B2E7 /* Models */,
 				E70427472C47739700053C6E /* Views */,
 				E7BD34912C4106FD00BDA300 /* Assets.xcassets */,
+				E7DA68382C49AA98000C7486 /* SearchFunction.swift */,
 				E7BD34932C4106FD00BDA300 /* Preview Content */,
 			);
 			path = "AddED+";
@@ -181,7 +181,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7BD34902C4106FB00BDA300 /* ContentView.swift in Sources */,
-				E70427462C4770E700053C6E /* Home.swift in Sources */,
+				E7DA683D2C49AC0E000C7486 /* ProgramPage.swift in Sources */,
+				E7DA683F2C49AC22000C7486 /* ProgramName.swift in Sources */,
+				E7DA68332C49A8D3000C7486 /* HomeScreen.swift in Sources */,
 				E7BD348E2C4106FB00BDA300 /* AddED_App.swift in Sources */,
 				F0A9CB362C49A309004B509A /* ProgramCardView.swift in Sources */,
 				F0A9CB382C49A314004B509A /* TagRectangleView.swift in Sources */,
@@ -324,7 +326,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AddED+/Preview Content\"";
-				DEVELOPMENT_TEAM = BFUV573K7L;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -354,7 +356,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AddED+/Preview Content\"";
-				DEVELOPMENT_TEAM = BFUV573K7L;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
