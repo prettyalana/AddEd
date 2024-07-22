@@ -14,8 +14,12 @@ struct HomeScreen: View {
         VStack {
             //Top green bar
             ZStack {
-                GreenHeader()
+                Rectangle()
+                    .fill(.green)
+                    .frame(width:UIScreen.main.bounds.width, height:90)
+                //insert logo here
             }
+            
             //Searching bar
             ZStack {
                 //Search bar background

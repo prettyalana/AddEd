@@ -7,12 +7,16 @@
 
 
 import SwiftUI
-struct AddProgramPage: View {
+struct ProgramPage: View {
     
     
     var body: some View {
         VStack {
-            GreenHeader()
+            Color.green
+                .frame(width:450 ,height:120)
+                .position(x:175 ,y:-50 )
+            Spacer()
+                .frame(height: 25)
             HStack{
                 Button{
                     //action to homescreen on previous page
@@ -35,13 +39,17 @@ struct AddProgramPage: View {
             Spacer()
                 .frame(height:20)
             ProgramName()
-            ProgramInfo()
-                .padding()
-            Spacer()
-                .frame(height:450)
         }
+        ProgramInfo()
+            .padding()
+        Spacer()
+            .frame(height:450)
     }
+    
 }
+
+
+
 #Preview {
-    AddProgramPage()
+    ProgramPage()
 }
