@@ -39,11 +39,11 @@ struct AddProgramPage: View {
             Spacer()
                 .frame(height:20)
             ProgramName()
+            ProgramInfo()
+                .padding()
+            Spacer()
+                .frame(height:450)
         }
-        ProgramInfo()
-            .padding()
-        Spacer()
-            .frame(height:450)
     }
     
 }
