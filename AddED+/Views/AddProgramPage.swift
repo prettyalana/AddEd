@@ -12,11 +12,7 @@ struct AddProgramPage: View {
     
     var body: some View {
         VStack {
-            Color.green
-                .frame(width:450 ,height:120)
-                .position(x:175 ,y:-50 )
-            Spacer()
-                .frame(height: 25)
+            GreenHeader()
             HStack{
                 Button{
                     //action to homescreen on previous page
@@ -45,11 +41,7 @@ struct AddProgramPage: View {
                 .frame(height:450)
         }
     }
-    
 }
-
-
-
 #Preview {
     AddProgramPage()
 }
