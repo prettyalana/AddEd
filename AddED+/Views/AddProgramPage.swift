@@ -7,7 +7,7 @@
 
 
 import SwiftUI
-struct ProgramPage: View {
+struct AddProgramPage: View {
     
     
     var body: some View {
@@ -51,5 +51,5 @@ struct ProgramPage: View {
 
 
 #Preview {
-    ProgramPage()
+    AddProgramPage()
 }

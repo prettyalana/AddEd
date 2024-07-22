@@ -23,12 +23,14 @@ struct TabBar: View {
                             Text("Saved")
                         }
                         .tag(1)
-                    Text("Add a New Program")
+                    
+                    AddProgramPage()
                         .tabItem {
                             Image(systemName: "plus.app")
                             Text("Add")
                         }
                         .tag(2)
+                    
                     Text("Search")
                         .tabItem {
                             Image(systemName: "magnifyingglass")
