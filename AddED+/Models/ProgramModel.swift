@@ -118,7 +118,7 @@ var webDevProgram = Program(inputName: "Intro to Web Development", inputDescript
 var placeholderPrograms: [Program] = [ECCChicago, afterSchoolMatters, cyberSecurityProgram, webDevProgram]
 var placeholderFeaturedPrograms: [Program] = [ECCChicago, afterSchoolMatters]
 
-var currentUser = User(name: "John Doe", username: "johndoe", interests: ["Technology"], email: "johndoe@example.com", password: "example", savedPrograms: [ECCChicago])
+var currentUser = User(name: "John Doe", username: "johndoe", interests: ["Technology"], email: "johndoe@example.com", password: "example", savedPrograms: [1, 3])
 
 var ECCReviewOne = Rating(program: ECCChicago, starCount: 4, title: "Great Program!!!", description: "This program taught me how to code!")
 var ECCReviewTwo = Rating(program: ECCChicago, starCount: 4, title: "Great Program!!!", description: "This program taught me how to code!")
