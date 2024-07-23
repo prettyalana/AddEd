@@ -8,10 +8,12 @@
 import Foundation
 import SwiftUI
 
-struct Rating {
+struct Rating: Identifiable{
+    var program: Program
     var starCount: Int
     var title: String
     var description: String
+    let id = UUID()
 }
 
 class Program: Identifiable {
@@ -109,4 +111,9 @@ var sampleData:  [Program] = [
 //        Program(id: 1, name: "Everyone Can Code", description: "The Everyone Can Code Chicago initiative was launched as a public-private partnership that expands opportunities for youth to develop coding skills and explore career pathways.  Through this initiative, employees at local businesses share their professional experience with youth.  And the youth have the opportunity to gain work experience through internships.", startDate: "06/24/24", endDate: "08/05/24", place: "Chicago, IL"),
 //        Program(id: 2, name: "After School Matters", description: "After School Matters inspires Chicago’s teens to discover their passions, develop skills for life beyond high school, and make friends along the way.", startDate: "07/16/24", endDate: "07/16/25", place: "Chicago, IL"),
     ]
+
+var ECCReviewOne = Rating(program: ECCChicago,starCount: 4, title: "Great Program!!!", description: "I loved this program because it taught me so much")
+var ECCReviewTwo = Rating(program: ECCChicago,starCount: 5, title: "Great Program!!!", description: "I loved this program because it taught me so much")
+var ECCReviewThree = Rating(program: ECCChicago, starCount: 3, title: "Great Program!!!", description: "I loved this program because it taught me so much")
+var placeholderRatings: [Rating] = [ECCReviewOne, ECCReviewTwo, ECCReviewThree]
 

@@ -11,6 +11,7 @@ struct RatingStarsView: View {
     
     @State var programRating: Program
     var test: Double
+    var isReview: Bool
     
     var body: some View {
         
@@ -74,5 +75,5 @@ struct RatingStarsView: View {
 }
 
 #Preview {
-    RatingStarsView(programRating: ECCChicago, test: 3.7)
+    RatingStarsView(programRating: ECCChicago, test: 3.7, isReview: false)
 }
