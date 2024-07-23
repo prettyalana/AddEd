@@ -10,7 +10,7 @@ import SwiftUI
 struct TagRectangleView: View {
     @State var displayTag: Tag
     @State var removable: Bool
-    @State var itemTagged: Program
+    @State var itemTagged: Program = ECCChicago
     var body: some View {
         if removable {
             HStack {

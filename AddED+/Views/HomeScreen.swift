@@ -14,12 +14,8 @@ struct HomeScreen: View {
         VStack {
             //Top green bar
             ZStack {
-                Rectangle()
-                    .fill(.green)
-                    .frame(width:UIScreen.main.bounds.width, height:90)
-                //insert logo here
+                GreenHeader()
             }
-            
             //Searching bar
             ZStack {
                 //Search bar background
@@ -58,7 +54,7 @@ struct HomeScreen: View {
                 HStack {
                     ForEach(placeholderFeaturedPrograms) {
                         featuredProgram in
-                        ProgramCardView(displayedProgram: featuredProgram, areTagsRemovable: false, paddingAmount: 10.0)
+                        ProgramCardView(displayedProgram: featuredProgram, areTagsRemovable: false, paddingAmount: 20.0)
                     }
                 }
             }

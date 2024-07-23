@@ -25,15 +25,17 @@ class Program: Identifiable {
     var verified: Bool
     var ratings: [Rating]
     var tags: [Tag]
-    init(inputName: String, inputDescription: String, inputTime: String, inputDays: String, inputPlace: String) {
+    var id: Int
+    init(inputName: String, inputDescription: String, inputTime: String, inputDays: String, inputPlace: String, isVerified: Bool, ratingsArray: [Rating], tagsArray: [Tag], idNumber: Int) {
         name = inputName
         description = inputDescription
         time = inputTime
         days = inputDays
         place = inputPlace
-        verified = false
-        ratings = []
-        tags = [technologyTag, paidTag]
+        verified = isVerified
+        ratings = ratingsArray
+        tags = tagsArray
+        id = idNumber
     }
     
     func addTag(inputTag: Tag) {
@@ -73,6 +75,16 @@ struct User {
     var email: String
     var password: String
     var savedPrograms: [Program]
+    
+    
+    func programHasInterests(program: Program) -> Bool {
+        for i in program.tags {
+            if interests.contains(i.name) {
+                return true
+            }
+        }
+        return false
+    }
 }
 
 class Tag: Identifiable {
@@ -98,22 +110,12 @@ class Tag: Identifiable {
 let technologyTag = Tag(inputName: "Technology", inputType: "Tech")
 let paidTag = Tag(inputName: "Paid Internship", inputType: "")
 
-var ECCChicago = Program(inputName: "Everyone Can Code Chicago", inputDescription: "Coding course for high school and college", inputTime: "2:00 PM - 5:00 PM", inputDays: "Weekdays 06/24/2024-8/02/2024", inputPlace: "Truman College")
-var afterSchoolMatters = Program(inputName: "After School Matters", inputDescription: "After School Matters inspires Chicago’s teens to discover their passions, develop skills for life beyond high school, and make friends along the way.", inputTime: "", inputDays: "07/16/2024-07/16/2025", inputPlace: "Chicago, Il")
+var ECCChicago = Program(inputName: "Everyone Can Code Chicago", inputDescription: "The Everyone Can Code Chicago initiative was launched as a public-private partnership that expands opportunities for youth to develop coding skills and explore career pathways.  Through this initiative, employees at local businesses share their professional experience with youth.  And the youth have the opportunity to gain work experience through internships.", inputTime: "2:00 PM - 5:00 PM", inputDays: "Weekdays 06/24/2024-8/02/2024", inputPlace: "Truman College", isVerified: true, ratingsArray: [], tagsArray: [technologyTag, paidTag], idNumber: 1)
+var afterSchoolMatters = Program(inputName: "After School Matters", inputDescription: "After School Matters inspires Chicago’s teens to discover their passions, develop skills for life beyond high school, and make friends along the way.", inputTime: "", inputDays: "07/16/2024-07/16/2025", inputPlace: "Chicago, Il", isVerified: true, ratingsArray: [], tagsArray: [technologyTag, paidTag], idNumber: 2)
+var cyberSecurityProgram = Program(inputName: "Intro to Cybersecurity", inputDescription: "Program Info", inputTime: "07/25/24",inputDays: "08/25/24", inputPlace: "Chicago, IL", isVerified: true, ratingsArray: [], tagsArray: [technologyTag, paidTag], idNumber: 3)
+var webDevProgram = Program(inputName: "Intro to Web Development", inputDescription: "After School Matters inspires Chicago’s teens to discover their passions, develop skills for life beyond high school, and make friends along the way.", inputTime: "07/25/24",inputDays: "08/25/24", inputPlace: "Chicago, IL", isVerified: true, ratingsArray: [], tagsArray: [technologyTag, paidTag], idNumber: 4)
 
-var placeholderPrograms: [Program] = [ECCChicago, afterSchoolMatters]
+var placeholderPrograms: [Program] = [ECCChicago, afterSchoolMatters, cyberSecurityProgram, webDevProgram]
 var placeholderFeaturedPrograms: [Program] = [ECCChicago, afterSchoolMatters]
 
-
-var sampleData:  [Program] = [
-    Program(inputName: "Intro to Cybersecurity", inputDescription: "something", inputTime: "07/25/24",inputDays: "08/25/24", inputPlace: "Chicago, IL"),
-    Program(inputName: "Intro to Web Development", inputDescription: "something", inputTime: "07/25/24",inputDays: "08/25/24", inputPlace: "Chicago, IL"),
-//        Program(id: 1, name: "Everyone Can Code", description: "The Everyone Can Code Chicago initiative was launched as a public-private partnership that expands opportunities for youth to develop coding skills and explore career pathways.  Through this initiative, employees at local businesses share their professional experience with youth.  And the youth have the opportunity to gain work experience through internships.", startDate: "06/24/24", endDate: "08/05/24", place: "Chicago, IL"),
-//        Program(id: 2, name: "After School Matters", description: "After School Matters inspires Chicago’s teens to discover their passions, develop skills for life beyond high school, and make friends along the way.", startDate: "07/16/24", endDate: "07/16/25", place: "Chicago, IL"),
-    ]
-
-var ECCReviewOne = Rating(program: ECCChicago,starCount: 4, title: "Great Program!!!", description: "I loved this program because it taught me so much")
-var ECCReviewTwo = Rating(program: ECCChicago,starCount: 5, title: "Great Program!!!", description: "I loved this program because it taught me so much")
-var ECCReviewThree = Rating(program: ECCChicago, starCount: 3, title: "Great Program!!!", description: "I loved this program because it taught me so much")
-var placeholderRatings: [Rating] = [ECCReviewOne, ECCReviewTwo, ECCReviewThree]
-
+var currentUser = User(name: "John Doe", username: "johndoe", interests: ["Technology"], email: "johndoe@example.com", password: "example", savedPrograms: [ECCChicago])
