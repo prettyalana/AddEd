@@ -70,6 +70,11 @@ struct HomeScreen: View {
             .background(.white)
             .cornerRadius(8)
             
+//            ScrollView() {
+//                ForEach(0..<placeholderPrograms.count) { i in
+//                        ProgramRecommendedView(program1: placeholderPrograms[i], program2: placeholderPrograms[i+1])
+//                }
+//            }
             Spacer()
         }
         .background(Color(red: 0.8705, green: 0.8705, blue: 0.8705))

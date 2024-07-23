@@ -72,7 +72,7 @@ struct User {
     var interests: [String]
     var email: String
     var password: String
-    var savedPrograms: [Program]
+    var savedPrograms: [Int]
     
     
     func programHasInterests(program: Program) -> Bool {
@@ -116,4 +116,4 @@ var webDevProgram = Program(inputName: "Intro to Web Development", inputDescript
 var placeholderPrograms: [Program] = [ECCChicago, afterSchoolMatters, cyberSecurityProgram, webDevProgram]
 var placeholderFeaturedPrograms: [Program] = [ECCChicago, afterSchoolMatters]
 
-var currentUser = User(name: "John Doe", username: "johndoe", interests: ["Technology"], email: "johndoe@example.com", password: "example", savedPrograms: [ECCChicago])
+var currentUser = User(name: "John Doe", username: "johndoe", interests: ["Technology"], email: "johndoe@example.com", password: "example", savedPrograms: [1, 3])
