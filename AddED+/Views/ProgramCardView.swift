@@ -26,11 +26,13 @@ struct ProgramCardView: View {
                         .font(.system(size:20))
                     if displayedProgram.verified {
                         Image(systemName: "checkmark.circle")
-                            .font(.system(size: 30, weight:.bold))
+                            .font(.system(size: 20, weight:.bold))
                             .foregroundColor(.green)
+                            .padding(.bottom, 8)
+                        
                     }
                 }
-                .frame(maxWidth:160, maxHeight:20)
+                .frame(maxWidth:170, maxHeight:20)
                 .padding([.top, .leading, .bottom], 5)
                 
                 
@@ -53,7 +55,7 @@ struct ProgramCardView: View {
                         .bold()
                         .font(.system(size: 24))
                     Spacer()
-                    if (currentUser.programHasInterests(program: displayedProgram)) {
+                    if (currentUser.savedPrograms.contains(displayedProgram.id)) {
                         Image(systemName:"bookmark.fill")
                             .foregroundColor(.blue)
                             .font(.system(size:24))
