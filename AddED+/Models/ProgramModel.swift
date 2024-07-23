@@ -74,7 +74,7 @@ struct User {
     var interests: [String]
     var email: String
     var password: String
-    var savedPrograms: [Program]
+    var savedPrograms: [Int]
     
     
     func programHasInterests(program: Program) -> Bool {

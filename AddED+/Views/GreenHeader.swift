@@ -13,6 +13,12 @@ struct GreenHeader: View {
             Rectangle()
                 .fill(.green)
                 .frame(width:UIScreen.main.bounds.width, height: 90)
+            HStack {
+                Image("logo")
+                    .resizable()
+                    .frame(width:225, height:90)
+                Spacer()
+            }
         }
     }
 }
