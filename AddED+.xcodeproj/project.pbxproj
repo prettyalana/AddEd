@@ -18,6 +18,7 @@
 		E7BD34952C4106FD00BDA300 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7BD34942C4106FD00BDA300 /* Preview Assets.xcassets */; };
 		E7DA68452C49C464000C7486 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA68442C49C464000C7486 /* TabBar.swift */; };
 		E7DA68472C49C485000C7486 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA68462C49C485000C7486 /* HomeScreen.swift */; };
+		F025DAA92C50434400B9249E /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F025DAA82C50434400B9249E /* RatingView.swift */; };
 		F0A9CB342C49A1CC004B509A /* ProgramModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A9CB332C49A1CC004B509A /* ProgramModel.swift */; };
 		F0A9CB362C49A309004B509A /* ProgramCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A9CB352C49A309004B509A /* ProgramCardView.swift */; };
 		F0A9CB382C49A314004B509A /* TagRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A9CB372C49A314004B509A /* TagRectangleView.swift */; };
@@ -39,6 +40,7 @@
 		E7BD34942C4106FD00BDA300 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E7DA68442C49C464000C7486 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		E7DA68462C49C485000C7486 /* HomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		F025DAA82C50434400B9249E /* RatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		F0A9CB332C49A1CC004B509A /* ProgramModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramModel.swift; sourceTree = "<group>"; };
 		F0A9CB352C49A309004B509A /* ProgramCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramCardView.swift; sourceTree = "<group>"; };
 		F0A9CB372C49A314004B509A /* TagRectangleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagRectangleView.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			children = (
 				E7BD348F2C4106FB00BDA300 /* ContentView.swift */,
 				E7DA68462C49C485000C7486 /* HomeScreen.swift */,
+				F633776E2C4EFCA50024D2BD /* ProgramRecommendedView.swift */,
 				E742DA0D2C4EF2D100B38B7E /* GreenHeader.swift */,
 				F0A9CB392C49A3FD004B509A /* ProgramView.swift */,
 				E754E0B42C4EEB0700D526A1 /* AddProgramPage.swift */,
@@ -72,6 +75,7 @@
 				F0A9CB352C49A309004B509A /* ProgramCardView.swift */,
 				F0A9CB372C49A314004B509A /* TagRectangleView.swift */,
 				E7DA68442C49C464000C7486 /* TabBar.swift */,
+				F025DAA82C50434400B9249E /* RatingView.swift */,
 				E754E0AE2C4EE90900D526A1 /* UserInterests.swift */,
 			);
 			path = Views;
@@ -203,8 +207,10 @@
 				E754E0B32C4EEADB00D526A1 /* ProgramInfo.swift in Sources */,
 				F0A9CB402C49B095004B509A /* RatingStarsView.swift in Sources */,
 				F0A9CB3A2C49A3FD004B509A /* ProgramView.swift in Sources */,
+				F025DAA92C50434400B9249E /* RatingView.swift in Sources */,
 				E742DA0E2C4EF2D100B38B7E /* GreenHeader.swift in Sources */,
 				F0A9CB3E2C49A779004B509A /* SearchFunction.swift in Sources */,
+				F633776F2C4EFCA50024D2BD /* ProgramRecommendedView.swift in Sources */,
 				E7DA68452C49C464000C7486 /* TabBar.swift in Sources */,
 				E754E0B52C4EEB0800D526A1 /* AddProgramPage.swift in Sources */,
 			);
