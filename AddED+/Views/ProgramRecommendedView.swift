@@ -12,12 +12,17 @@ struct ProgramRecommendedView: View {
     @State var program2: Program
     var body: some View {
         HStack {
+            Spacer()
             ProgramCardView(displayedProgram: program1, areTagsRemovable: false, paddingAmount: 10.0)
-                .padding(.leading, 20)
+//                .padding(.leading, 20)
+                .frame(width:180, height:50)
+            Spacer()
             ProgramCardView(displayedProgram:program2, areTagsRemovable: false, paddingAmount: 10.0)
-                .padding(.trailing, 20)
+//                .padding(.trailing, 20)
+                .frame(width:180, height:50)
+            Spacer()
         }
-        .padding([.leading, .trailing], 20)
+//        .padding([.leading, .trailing], 20)
     }
 }
 
