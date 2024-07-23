@@ -23,9 +23,17 @@ struct ProgramView: View {
             }
             ScrollView {
                 HStack{
-                    Image("backArrow")
-                        .resizable()
-                        .frame(width: 25, height: 25)
+                    NavigationView(){
+                        NavigationLink(destination: HomeScreen()){
+                            Image("backArrow")
+                                .resizable()
+                                .frame(width:25, height: 25)
+                        }
+                    }
+                    .frame(width:25, height:25)
+//                    Image("backArrow")
+//                        .resizable()
+//                        .frame(width: 25, height: 25)
                     
                     Spacer()
                     
@@ -64,13 +72,18 @@ struct ProgramView: View {
                 }
                 .frame(width: 300, height: 200)
                 
+                
+                
                 Text("Reviews")
                     .font(.title)
+                
+                
                 ZStack{
                         
                     Rectangle()
                         .fill(.green)
                         .frame(width:350)
+                    
                     
                    
                     VStack {
@@ -95,6 +108,11 @@ struct ProgramView: View {
     }
 }
 
-#Preview {
-    ProgramView(displayedProgram: ECCChicago)
+//#Preview {
+//    ProgramView(displayedProgram: ECCChicago)
+//}
+struct ProgramView_Previews: PreviewProvider {
+    static var previews: some View {
+        ProgramView(displayedProgram: ECCChicago)
+    }
 }
