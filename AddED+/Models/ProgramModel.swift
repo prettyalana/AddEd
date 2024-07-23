@@ -119,3 +119,8 @@ var placeholderPrograms: [Program] = [ECCChicago, afterSchoolMatters, cyberSecur
 var placeholderFeaturedPrograms: [Program] = [ECCChicago, afterSchoolMatters]
 
 var currentUser = User(name: "John Doe", username: "johndoe", interests: ["Technology"], email: "johndoe@example.com", password: "example", savedPrograms: [ECCChicago])
+
+var ECCReviewOne = Rating(program: ECCChicago, starCount: 4, title: "Great Program!!!", description: "This program taught me how to code!")
+var ECCReviewTwo = Rating(program: ECCChicago, starCount: 4, title: "Great Program!!!", description: "This program taught me how to code!")
+var ECCReviewThree = Rating(program: ECCChicago, starCount: 4, title: "Great Program!!!", description: "This program taught me how to code!")
+var placeholderRatings = [ECCReviewOne, ECCReviewTwo,ECCReviewThree]
