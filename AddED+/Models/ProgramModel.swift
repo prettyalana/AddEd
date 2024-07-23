@@ -96,6 +96,12 @@ class Tag: Identifiable {
             return Color.yellow
         case "Tech":
             return Color.blue
+        case "Arts":
+            return Color.pink
+        case "Sports":
+            return Color.red
+        case "Culinary":
+            return Color.green
         default:
             return Color.black
         }
@@ -104,12 +110,16 @@ class Tag: Identifiable {
 }
 
 let technologyTag = Tag(inputName: "Technology", inputType: "Tech")
-let paidTag = Tag(inputName: "Paid Internship", inputType: "")
+let paidTag = Tag(inputName: "Paid Internship", inputType: "Paid")
+let artsTag = Tag(inputName: "Arts", inputType: "Art")
+let sportsTag = Tag(inputName: "Sports", inputType: "Sports")
+
+var placeholderTags: [Tag] = [technologyTag, paidTag, artsTag, sportsTag]
 
 var ECCChicago = Program(inputName: "Everyone Can Code Chicago", inputDescription: "The Everyone Can Code Chicago initiative was launched as a public-private partnership that expands opportunities for youth to develop coding skills and explore career pathways.  Through this initiative, employees at local businesses share their professional experience with youth.  And the youth have the opportunity to gain work experience through internships.", inputTime: "2:00 PM - 5:00 PM", inputDays: "Weekdays 06/24/2024-8/02/2024", inputPlace: "Truman College")
 var afterSchoolMatters = Program(inputName: "After School Matters", inputDescription: "After School Matters inspires Chicago’s teens to discover their passions, develop skills for life beyond high school, and make friends along the way.", inputTime: "", inputDays: "07/16/2024-07/16/2025", inputPlace: "Chicago, Il")
 var cyberSecurityProgram = Program(inputName: "Intro to Cybersecurity", inputDescription: "Program Info", inputTime: "07/25/24",inputDays: "08/25/24", inputPlace: "Chicago, IL")
-var webDevProgram = Program(inputName: "Intro to Web Development", inputDescription: "After School Matters inspires Chicago’s teens to discover their passions, develop skills for life beyond high school, and make friends along the way.", inputTime: "07/25/24",inputDays: "08/25/24", inputPlace: "Chicago, IL")
+var webDevProgram = Program(inputName: "Intro to Web Development", inputDescription: "Learn the fundamentals of web development, including HTML, CSS, and JavaScript. Build your first websites and explore the possibilities of a career in web design and development.", inputTime: "07/25/24",inputDays: "08/25/24", inputPlace: "Chicago, IL")
 
 var placeholderPrograms: [Program] = [ECCChicago, afterSchoolMatters, cyberSecurityProgram, webDevProgram]
 var placeholderFeaturedPrograms: [Program] = [ECCChicago, afterSchoolMatters]

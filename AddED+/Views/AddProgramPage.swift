@@ -40,6 +40,7 @@ struct AddProgramPage: View {
             Spacer()
                 .frame(height:450)
         }
+        .ignoresSafeArea()
     }
 }
 #Preview {

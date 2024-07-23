@@ -76,15 +76,6 @@ struct HomeScreen: View {
         .ignoresSafeArea()
     }
 }
-
-//extension HomeScreen {
-//    func searchPrograms() async {
-//        for i in 0...placeholderPrograms.count {
-//            ProgramCardView(displayedProgram: placeholderPrograms[i], areTagsRemovable: false, paddingAmount: 20.0)
-//        }
-//    }
-//}
-
 #Preview {
     HomeScreen()
 }
