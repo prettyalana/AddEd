@@ -48,7 +48,7 @@ struct ProgramView: View {
                         
                     }
                     
-                    RatingStarsView(programRating: ECCChicago, test: 3.7)
+                    RatingStarsView(programRating: ECCChicago, test: 3.7, isReview: false)
                 }
                 
                 HStack {
@@ -67,12 +67,19 @@ struct ProgramView: View {
                 Text("Reviews")
                     .font(.title)
                 ZStack{
-                    HStack {
-                        Spacer()
-                        Color.gray
-                        Spacer()
-                    }
+                        
+                    Rectangle()
+                        .fill(.green)
+                        .frame(width:350)
                     
+                   
+                    VStack {
+                        ForEach(placeholderRatings){
+                            review in
+                            RatingView(review: review)
+                            
+                        }
+                    }
                     
                     
                     

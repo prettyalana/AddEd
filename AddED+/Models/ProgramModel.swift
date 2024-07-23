@@ -8,10 +8,12 @@
 import Foundation
 import SwiftUI
 
-struct Rating {
+struct Rating: Identifiable{
+    var program: Program
     var starCount: Int
     var title: String
     var description: String
+    let id = UUID()
 }
 
 class Program: Identifiable {

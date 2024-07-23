@@ -24,7 +24,8 @@
 		F0A9CB3A2C49A3FD004B509A /* ProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A9CB392C49A3FD004B509A /* ProgramView.swift */; };
 		F0A9CB3E2C49A779004B509A /* SearchFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A9CB3D2C49A779004B509A /* SearchFunction.swift */; };
 		F0A9CB402C49B095004B509A /* RatingStarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A9CB3F2C49B095004B509A /* RatingStarsView.swift */; };
-		F633776F2C4EFCA50024D2BD /* ProgramRecommendedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F633776E2C4EFCA50024D2BD /* ProgramRecommendedView.swift */; };
+		F0BCB61F2C49C47100405C39 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BCB61E2C49C47100405C39 /* TabBar.swift */; };
+		F0BCB6212C49C48100405C39 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BCB6202C49C48100405C39 /* HomeScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +47,8 @@
 		F0A9CB392C49A3FD004B509A /* ProgramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramView.swift; sourceTree = "<group>"; };
 		F0A9CB3D2C49A779004B509A /* SearchFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFunction.swift; sourceTree = "<group>"; };
 		F0A9CB3F2C49B095004B509A /* RatingStarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingStarsView.swift; sourceTree = "<group>"; };
-		F633776E2C4EFCA50024D2BD /* ProgramRecommendedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramRecommendedView.swift; sourceTree = "<group>"; };
+		F0BCB61E2C49C47100405C39 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		F0BCB6202C49C48100405C39 /* HomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F025DAA72C4EED4600B9249E /* RatingView.swift in Sources */,
 				E7BD34902C4106FB00BDA300 /* ContentView.swift in Sources */,
 				E754E0B12C4EEAB200D526A1 /* ProgramName.swift in Sources */,
 				E754E0AF2C4EE90900D526A1 /* UserInterests.swift in Sources */,
