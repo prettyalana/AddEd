@@ -12,38 +12,16 @@ struct ProgramView: View {
     @State var displayedProgram: Program
     
     var body: some View {
-        
         VStack{
             //Top green bar
-            ZStack {
-                Rectangle()
-                    .fill(.green)
-                    .frame(width:UIScreen.main.bounds.width, height:90)
-                //insert logo here
-            }
+            GreenHeader()
             ScrollView {
                 HStack{
-                    NavigationView(){
-                        NavigationLink(destination: HomeScreen()){
-                            Image("backArrow")
-                                .resizable()
-                                .frame(width:25, height: 25)
-                        }
-                    }
-                    .frame(width:25, height:25)
-//                    Image("backArrow")
-//                        .resizable()
-//                        .frame(width: 25, height: 25)
-                    
                     Spacer()
-                    
                     Text(displayedProgram.name)
                         .font(.largeTitle)
                         .padding()
                     Spacer()
-                    
-                    
-                    
                 }
                 
                 VStack {
@@ -51,9 +29,6 @@ struct ProgramView: View {
                         Image("Placeholder")
                             .resizable()
                             .frame(width: 300, height: 200)
-                        
-                        
-                        
                     }
                     
                     RatingStarsView(programRating: ECCChicago, test: 3.7, isReview: false)
@@ -72,36 +47,20 @@ struct ProgramView: View {
                 }
                 .frame(width: 300, height: 200)
                 
-                
-                
                 Text("Reviews")
                     .font(.title)
                 
-                
                 ZStack{
-                        
                     Rectangle()
                         .fill(.green)
                         .frame(width:350)
-                    
-                    
-                   
                     VStack {
                         ForEach(placeholderRatings){
                             review in
                             RatingView(review: review)
-                            
                         }
                     }
-                    
-                    
-                    
                 }
-                
-                
-                
-                
-                
             }
         }
         .ignoresSafeArea()

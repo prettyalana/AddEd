@@ -13,19 +13,25 @@ struct ProgramRecommendedView: View {
     var body: some View {
         HStack {
             Spacer()
-            ProgramCardView(displayedProgram: program1, areTagsRemovable: false, paddingAmount: 10.0)
-//                .padding(.leading, 20)
-                .frame(width:180, height:50)
+            NavigationLink(destination:ProgramView(displayedProgram: program1)) {
+                ProgramCardView(displayedProgram: program1, areTagsRemovable: false, paddingAmount: 10.0)
+                    .frame(width:180, height:140)
+            }
+            
             Spacer()
-            ProgramCardView(displayedProgram:program2, areTagsRemovable: false, paddingAmount: 10.0)
-//                .padding(.trailing, 20)
-                .frame(width:180, height:50)
+            NavigationLink(destination:ProgramView(displayedProgram: program2)) {
+                ProgramCardView(displayedProgram: program2, areTagsRemovable: false, paddingAmount: 10.0)
+                    .frame(width:180, height:140)
+            }
             Spacer()
         }
-//        .padding([.leading, .trailing], 20)
     }
 }
 
 #Preview {
-    ProgramRecommendedView(program1: ECCChicago, program2: afterSchoolMatters)
+    VStack {
+        ProgramRecommendedView(program1: ECCChicago, program2: afterSchoolMatters)
+        ProgramRecommendedView(program1: cyberSecurityProgram, program2: webDevProgram)
+    }
+    
 }
