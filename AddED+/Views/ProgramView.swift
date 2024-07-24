@@ -32,7 +32,7 @@ struct ProgramView: View {
                                 .frame(width: 300, height: 200)
                         }
                         
-                        RatingStarsView(starCount: 4)
+                        RatingStarsView(starCount: displayedProgram.ratingsAverageScore())
                     }
                     
                     HStack {
@@ -71,12 +71,13 @@ struct ProgramView: View {
                             .fill(.green)
                             .frame(width:350)
                         VStack {
-                            ForEach(placeholderRatings){
+                            ForEach(displayedProgram.ratings){
                                 review in
                                 RatingView(review: review)
                             }
                         }
                     }
+                   
                 }
             }
             .ignoresSafeArea()

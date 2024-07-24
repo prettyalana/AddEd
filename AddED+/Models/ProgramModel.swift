@@ -13,6 +13,11 @@ struct Rating: Identifiable{
     var title: String
     var description: String
     let id = UUID()
+    init(starCount: Int, title: String, description: String) {
+        self.starCount = starCount
+        self.title = title
+        self.description = description
+    }
 }
 
 class publicRatingValue: ObservableObject {
@@ -63,10 +68,15 @@ class Program: Identifiable {
     
     func ratingsAverageScore() -> Int {
         var sum = 0
+        var numRatings = ratings.count
+        if numRatings == 0 {
+            numRatings = 1
+        }
         for i in ratings {
             sum += i.starCount
         }
-        return sum
+        
+        return sum / numRatings
     }
     
 }
@@ -115,9 +125,9 @@ class Tag: Identifiable {
     }
     
 }
-var ECCReviewOne = Rating(starCount: 4, title: "Great Program!!!", description: "This program taught me how to code!")
+var ECCReviewOne = Rating(starCount: 1, title: "Great Program!!!", description: "This program taught me how to code!")
 var ECCReviewTwo = Rating(starCount: 5, title: "Great Program!!!", description: "This program taught me how to code!")
-var ECCReviewThree = Rating(starCount: 3, title: "Great Program!!!", description: "This program taught me how to code!")
+var ECCReviewThree = Rating(starCount: 4, title: "Great Program!!!", description: "This program taught me how to code!")
 var placeholderRatings = [ECCReviewOne, ECCReviewTwo,ECCReviewThree]
 
 

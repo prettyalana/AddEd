@@ -12,7 +12,6 @@ struct AddRatingView: View {
     @State var title: String = ""
     @StateObject var starCount = publicRatingValue()
     @State var program: Program
-    
     var body: some View {
         NavigationView {
             
@@ -51,9 +50,18 @@ struct AddRatingView: View {
                         .fill(.green)
                         .frame(width: 200, height:50)
                         .cornerRadius(10)
-                    Text("Post")
-                        .foregroundColor(.white)
-                        .font(.title2)
+                    Button(action: {
+                        let tempRating = Rating(starCount: starCount.starCount, title: title, description: description)
+                        program.addRating(inputRating: tempRating)
+                        
+                    }){
+                        Text("Post Review")
+                            .foregroundColor(.white)
+                            .font(.title2)
+                    }
+//                    Text("Post")
+//                        .foregroundColor(.white)
+//                        .font(.title2)
                 }
                 
 //                Text("\(starCount.starCount)")
