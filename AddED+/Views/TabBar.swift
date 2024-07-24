@@ -17,7 +17,7 @@ struct TabBar: View {
                     Text("Home")
                 }
                 .tag(0)
-            Text("Saved Programs")
+            SavedProgramsTab()
                 .tabItem {
                     Image(systemName: "bookmark")
                     Text("Saved")

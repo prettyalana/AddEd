@@ -24,26 +24,21 @@ struct ProgramInfo: View {
                     .textFieldStyle(.roundedBorder)
                     .truncationMode(.tail)
                     .frame(width: 350)
-                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
                 
                 TextField("Time", text:$time)
                     .textFieldStyle(.roundedBorder)
                     .truncationMode(.tail)
                     .frame(width: 350)
-                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
                 
                 TextField("Days", text:$days)
                     .textFieldStyle(.roundedBorder)
                     .truncationMode(.tail)
                     .frame(width: 350)
-                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
                 
                 TextField("Place", text:$place)
                     .textFieldStyle(.roundedBorder)
                     .truncationMode(.tail)
                     .frame(width: 350)
-                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
-                //tags, but idk how
             }
         }
     }
