@@ -54,7 +54,7 @@ struct HomeScreen: View {
                         ForEach(placeholderFeaturedPrograms) {
                             featuredProgram in
                             NavigationLink(destination:ProgramView(displayedProgram: featuredProgram)) {
-                                ProgramCardView(displayedProgram: featuredProgram, areTagsRemovable: false, paddingAmount: 20.0)
+                                ProgramCardView(displayedProgram: featuredProgram, areTagsRemovable: false, paddingAmount: 10.0)
                             }
                             
                         }
