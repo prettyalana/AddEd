@@ -17,8 +17,8 @@ struct RatingView: View {
                 .fill(.white)
                 .frame(width: 300, height: 200)
                 .border(.black)
-                
-//                .shadow(color: Color(red: 0.4, green: 0.4, blue: 0.4), radius:5, y:5)
+            
+            //                .shadow(color: Color(red: 0.4, green: 0.4, blue: 0.4), radius:5, y:5)
                 .padding()
             
             VStack(alignment: .leading){
@@ -38,7 +38,7 @@ struct RatingView: View {
                     VStack {
                         Text(review.title)
                             .font(.subheadline)
-                        .bold()
+                            .bold()
                         
                         RatingStarsView(programRating: ECCChicago, test: 4, isReview: true)
                     }
@@ -51,8 +51,8 @@ struct RatingView: View {
                 Divider()
                     .frame(width:300)
                     .overlay(Color(.black))
-                    
-//                Text(review.description)
+                
+                //                Text(review.description)
                 ScrollView {
                     Text(review.description)
                         .frame(width:285 , height: 80)

@@ -11,13 +11,15 @@ struct GreenHeader: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .fill(.green)
+                .fill(.addED)
                 .frame(width:UIScreen.main.bounds.width, height: 90)
             HStack {
-                Image("logo 1")
+                Image("logoTwo")
                     .resizable()
-                    .frame(width:400, height:90)
+                    .frame(width:120, height:45)
+                Spacer()
             }
+            .padding()
         }
     }
 }

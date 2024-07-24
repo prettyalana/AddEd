@@ -22,11 +22,11 @@ struct TagRectangleView: View {
                     }
                     .padding(6.0)
                 })
-                    .background(displayTag.getTypeColor())
-                    .cornerRadius(8)
-                    .foregroundColor(.white)
-                    .padding(.all, 6.0)
-                    .font(.system(size: 20))
+                .background(displayTag.getTypeColor())
+                .cornerRadius(8)
+                .foregroundColor(.white)
+                .padding(.all, 6.0)
+                .font(.system(size: 20))
             }
         } else {
             Text(displayTag.name)
