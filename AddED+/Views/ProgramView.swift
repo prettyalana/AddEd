@@ -12,58 +12,75 @@ struct ProgramView: View {
     @State var displayedProgram: Program
     
     var body: some View {
-        VStack{
-            //Top green bar
-            GreenHeader()
-            ScrollView {
-                HStack{
-                    Spacer()
-                    Text(displayedProgram.name)
-                        .font(.largeTitle)
-                        .padding()
-                    Spacer()
-                }
-                
-                VStack {
-                    HStack {
-                        Image("Placeholder")
-                            .resizable()
-                            .frame(width: 300, height: 200)
+        NavigationView {
+            VStack{
+                //Top green bar
+                GreenHeader()
+                ScrollView {
+                    HStack{
+                        Spacer()
+                        Text(displayedProgram.name)
+                            .font(.largeTitle)
+                            .padding()
+                        Spacer()
                     }
                     
-                    RatingStarsView(programRating: ECCChicago, test: 3.7, isReview: false)
-                }
-                
-                HStack {
-                    TagRectangleView(displayTag: technologyTag, removable: false, itemTagged: ECCChicago)
-                    
-                    
-                    TagRectangleView(displayTag: paidTag, removable: false, itemTagged: ECCChicago)
-                }
-                .padding(.top)
-                
-                GroupBox(label: Label("Description" , systemImage: "")) {
-                    Text(displayedProgram.description)
-                }
-                .frame(width: 300, height: 200)
-                
-                Text("Reviews")
-                    .font(.title)
-                
-                ZStack{
-                    Rectangle()
-                        .fill(.green)
-                        .frame(width:350)
                     VStack {
-                        ForEach(placeholderRatings){
-                            review in
-                            RatingView(review: review)
+                        HStack {
+                            Image("Placeholder")
+                                .resizable()
+                                .frame(width: 300, height: 200)
+                        }
+                        
+                        RatingStarsView(starCount: 4)
+                    }
+                    
+                    HStack {
+                        TagRectangleView(displayTag: technologyTag, removable: false, itemTagged: ECCChicago)
+                        
+                        
+                        TagRectangleView(displayTag: paidTag, removable: false, itemTagged: ECCChicago)
+                    }
+                    .padding(.top)
+                    
+                    GroupBox(label: Label("Description" , systemImage: "")) {
+                        Text(displayedProgram.description)
+                    }
+                    .frame(width: 300, height: 200)
+                    
+                    ZStack{
+                        Rectangle()
+                            .fill(.green)
+                            .frame(width:250, height:50)
+                            .cornerRadius(10)
+    //                    Text("Add a Review")
+    //                        .foregroundColor(.white)
+                        NavigationLink(destination:AddRatingView(program:displayedProgram)){
+                            Text("Add a Review")
+                                .foregroundColor(.white)
+                        }
+                        
+                            
+                    }
+                    
+                    Text("Reviews")
+                        .font(.title)
+                    
+                    ZStack{
+                        Rectangle()
+                            .fill(.green)
+                            .frame(width:350)
+                        VStack {
+                            ForEach(placeholderRatings){
+                                review in
+                                RatingView(review: review)
+                            }
                         }
                     }
                 }
             }
+            .ignoresSafeArea()
         }
-        .ignoresSafeArea()
     }
 }
 

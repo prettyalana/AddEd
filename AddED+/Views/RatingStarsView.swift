@@ -9,9 +9,9 @@ import SwiftUI
 
 struct RatingStarsView: View {
     
-    @State var programRating: Program
-    var test: Double
-    var isReview: Bool
+    
+    var starCount: Int
+    
     
     var body: some View {
         
@@ -19,14 +19,14 @@ struct RatingStarsView: View {
         HStack {
             
             
-            if test >= 4.5 {
+            if starCount == 5 {
                 Image(systemName:"star.fill")
                 Image(systemName:"star.fill")
                 Image(systemName:"star.fill")
                 Image(systemName:"star.fill")
                 Image(systemName:"star.fill")
             }
-            else if test >= 3.5 {
+            else if starCount == 4 {
                 Image(systemName:"star.fill")
                 Image(systemName:"star.fill")
                 Image(systemName:"star.fill")
@@ -34,21 +34,21 @@ struct RatingStarsView: View {
                 Image(systemName:"star")
                 
             }
-            else if test >= 2.5 {
+            else if starCount == 3 {
                 Image(systemName:"star.fill")
                 Image(systemName:"star.fill")
                 Image(systemName:"star.fill")
                 Image(systemName:"star")
                 Image(systemName:"star")
             }
-            else if test >= 1.5 {
+            else if starCount == 2 {
                 Image(systemName:"star.fill")
                 Image(systemName:"star.fill")
                 Image(systemName:"star")
                 Image(systemName:"star")
                 Image(systemName:"star")
             }
-            else if test >= 0.5 {
+            else if starCount == 1 {
                 Image(systemName:"star.fill")
                 Image(systemName:"star")
                 Image(systemName:"star")
@@ -75,5 +75,5 @@ struct RatingStarsView: View {
 }
 
 #Preview {
-    RatingStarsView(programRating: ECCChicago, test: 3.7, isReview: false)
+    RatingStarsView(starCount: 4)
 }
