@@ -73,7 +73,7 @@ struct HomeScreen: View {
                 .cornerRadius(8)
                 displayRecommendedPrograms()
             }
-            .background(Color(red: 0.8705, green: 0.8705, blue: 0.8705))
+            .background(.customBackground)
             .ignoresSafeArea()
         }
     }

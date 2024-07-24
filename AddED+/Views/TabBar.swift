@@ -29,7 +29,7 @@ struct TabBar: View {
                     Text("Add")
                 }
                 .tag(2)
-            Text("Search")
+            SearchView()
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text("Search")

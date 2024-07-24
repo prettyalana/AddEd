@@ -29,6 +29,7 @@ struct SavedProgramsTab: View {
                 }
             }
         }
+        .background(.customBackground)
         .ignoresSafeArea()
     }
 }
