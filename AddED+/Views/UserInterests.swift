@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
+import WrappingHStack
 
 struct UserInterests: View {
-    var i = 0
+    var tags: [Tag] = placeholderTags
     
     var body: some View {
         VStack {
@@ -16,7 +17,7 @@ struct UserInterests: View {
                 GreenHeader()
             }
             .padding(.bottom)
-            HStack {
+            ZStack {
                 //Button
                 Image(systemName: "arrow.left")
             }
@@ -34,20 +35,23 @@ struct UserInterests: View {
                 .frame(width: UIScreen.main.bounds.width-20, height: 60, alignment:.leading)
                 .background(.white)
                 .cornerRadius(8)
-                    HStack {
-
+                ZStack {
+                    WrappingHStack {
+                        ForEach(tags) { tag in
+                            TagRectangleView(displayTag: tag, removable: true)
+                        }
                     }
-                    .frame(width: UIScreen.main.bounds.width-20, height: 250, alignment:.leading)
-                    .background(.white)
-                    .cornerRadius(8)
-                    Spacer()
                 }
+                .frame(width: UIScreen.main.bounds.width-20, height: 300, alignment: .topLeading)
+                .background(.white)
+                .cornerRadius(8)
             }
-            .background(Color(red: 0.8705, green: 0.8705, blue: 0.8705))
-            .ignoresSafeArea()
         }
+        .background(Color(red: 0.8705, green: 0.8705, blue: 0.8705))
+        .ignoresSafeArea()
     }
-    
-    #Preview {
-        UserInterests()
-    }
+}
+
+#Preview {
+    UserInterests()
+}

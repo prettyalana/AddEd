@@ -28,12 +28,7 @@ struct ProgramView: View {
                         }
                     }
                     .frame(width:25, height:25)
-//                    Image("backArrow")
-//                        .resizable()
-//                        .frame(width: 25, height: 25)
-                    
                     Spacer()
-                    
                     Text(displayedProgram.name)
                         .font(.largeTitle)
                         .padding()
@@ -76,13 +71,13 @@ struct ProgramView: View {
                 
                 
                 ZStack{
-                        
+                    
                     Rectangle()
                         .fill(.green)
                         .frame(width:350)
                     
                     
-                   
+                    
                     VStack {
                         ForEach(placeholderRatings){
                             review in

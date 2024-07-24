@@ -65,9 +65,9 @@ struct RatingStarsView: View {
             }
             
             
-//            Image(systemName:"star")
-//            Image(systemName:"star.fill")
-                
+            //            Image(systemName:"star")
+            //            Image(systemName:"star.fill")
+            
         }
         
     }

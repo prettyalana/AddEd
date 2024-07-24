@@ -12,7 +12,9 @@ struct AddProgramPage: View {
     
     var body: some View {
         VStack {
-            GreenHeader()
+            HStack {
+                GreenHeader()
+            }
             HStack{
                 Button{
                     //action to homescreen on previous page
@@ -26,7 +28,6 @@ struct AddProgramPage: View {
                     .foregroundColor(.black)
                 Spacer()
                 Button("Post") {
-                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*///how do i make this add to whatever "database" we will have
                 }
                 .fontWeight(.medium)
                 .foregroundColor(.black)

@@ -115,7 +115,7 @@ class Tag: Identifiable {
 
 let technologyTag = Tag(inputName: "Technology", inputType: "Tech")
 let paidTag = Tag(inputName: "Paid Internship", inputType: "Paid")
-let artsTag = Tag(inputName: "Arts", inputType: "Art")
+let artsTag = Tag(inputName: "Arts", inputType: "Arts")
 let sportsTag = Tag(inputName: "Sports", inputType: "Sports")
 
 var placeholderTags: [Tag] = [technologyTag, paidTag, artsTag, sportsTag]
