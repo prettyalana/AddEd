@@ -14,9 +14,7 @@ struct HomeScreen: View {
         NavigationView{
             VStack {
                 //Top green bar
-                ZStack {
-                    GreenHeader()
-                }
+                GreenHeader()
                 //Searching bar
                 ZStack {
                     //Search bar background
@@ -73,8 +71,7 @@ struct HomeScreen: View {
                 .frame(width: UIScreen.main.bounds.width-20, height: 60, alignment:.leading)
                 .background(.white)
                 .cornerRadius(8)
-                
-                Spacer()
+                displayRecommendedPrograms()
             }
             .background(Color(red: 0.8705, green: 0.8705, blue: 0.8705))
             .ignoresSafeArea()
@@ -82,17 +79,17 @@ struct HomeScreen: View {
     }
 }
 
-//extension HomeScreen {
-//    func searchPrograms() async {
-//        for i in 0...placeholderPrograms.count {
-//            ProgramCardView(displayedProgram: placeholderPrograms[i], areTagsRemovable: false, paddingAmount: 20.0)
-//        }
-//    }
-//}
+extension HomeScreen {
+    func displayRecommendedPrograms() -> some View {
+        ScrollView(.vertical) {
+            ForEach(0..<(placeholderPrograms.count)/2, id:\.self) { i in
+                ProgramRecommendedView(program1: placeholderPrograms[i*2], program2: placeholderPrograms[i*2+1])
+            }
+                
+        }
+    }
+}
 
-//#Preview {
-//    HomeScreen()
-//}
 
 struct HomeScreen_Previews: PreviewProvider {
     static var previews: some View {
