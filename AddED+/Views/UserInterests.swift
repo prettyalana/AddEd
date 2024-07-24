@@ -17,11 +17,6 @@ struct UserInterests: View {
                 GreenHeader()
             }
             .padding(.bottom)
-            ZStack {
-                //Button
-                Image(systemName: "arrow.left")
-            }
-            .padding(.trailing, 300)
             ScrollView {
                 //Button
                 Image("profileImage")
@@ -45,6 +40,7 @@ struct UserInterests: View {
                 .frame(width: UIScreen.main.bounds.width-20, height: 300, alignment: .topLeading)
                 .background(.white)
                 .cornerRadius(8)
+                
             }
         }
         .background(Color(red: 0.8705, green: 0.8705, blue: 0.8705))
