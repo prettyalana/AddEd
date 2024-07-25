@@ -38,8 +38,12 @@ struct SearchView: View {
                 
                 VStack(alignment:.leading) {
                     
-                    Text("Filters")
-                        .bold()
+                    HStack {
+                        Text("Filters")
+                            .bold()
+                            .padding(.leading, 20)
+                        Spacer()
+                    }
                 }
                 
                 List {

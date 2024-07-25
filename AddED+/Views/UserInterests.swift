@@ -34,10 +34,11 @@ struct UserInterests: View {
                 .background(.white)
                 .cornerRadius(8)
                 ZStack {
-                    WrappingHStack {
-                        ForEach(tags) { tag in
-                            TagRectangleView(displayTag: tag, removable: true)
-                                .fixedSize()
+                    ScrollView() {
+                        VStack(spacing: 0) {
+                            ForEach(tags) { tag in
+                                TagListView(usedTag: tag)
+                            }
                         }
                     }
                 }
