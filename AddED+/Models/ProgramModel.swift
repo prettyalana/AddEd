@@ -140,6 +140,7 @@ var webDevProgram = Program(inputName: "Intro to Web Development", inputDescript
 
 var placeholderPrograms: [Program] = [ECCChicago, afterSchoolMatters, cyberSecurityProgram, webDevProgram]
 var placeholderFeaturedPrograms: [Program] = [ECCChicago, afterSchoolMatters]
+var savedPrograms: [Program] = [ECCChicago, cyberSecurityProgram]
 
 var currentUser = User(name: "John Doe", username: "johndoe", interests: ["Technology"], email: "johndoe@example.com", password: "example", savedPrograms: [1, 3])
 
