@@ -230,6 +230,7 @@
 				F0A9CB382C49A314004B509A /* TagRectangleView.swift in Sources */,
 				E7DA68472C49C485000C7486 /* HomeScreen.swift in Sources */,
 				E73B4F632C518DCF00FDF8FF /* SavedProgramsTab.swift in Sources */,
+				F0A9CB342C49A1CC004B509A /* ProgramModel.swift in Sources */,
 				E754E0B32C4EEADB00D526A1 /* ProgramInfo.swift in Sources */,
 				F63377762C50A7E70024D2BD /* ProgramRecommendedView.swift in Sources */,
 				F63775642C51A55700491F55 /* TagListView.swift in Sources */,
