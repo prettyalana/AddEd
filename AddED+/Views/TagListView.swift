@@ -10,7 +10,9 @@ import SwiftUI
 struct TagListView: View {
     @State var usedTag: Tag
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Rectangle()
+        }
     }
 }
 
