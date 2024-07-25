@@ -9,7 +9,6 @@ import SwiftUI
 
 struct SavedProgramsTab: View {
     var body: some View {
-        NavigationView{
             VStack{
                 HStack {
                     GreenHeader()
@@ -37,7 +36,6 @@ struct SavedProgramsTab: View {
                     }
                     .ignoresSafeArea()
                 }
-            }
         .background(.customBackground)
         .ignoresSafeArea()
     }
