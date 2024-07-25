@@ -13,6 +13,8 @@ struct ProgramName: View {
         TextField("Program Name", text:$programName)
             .font(.title)
             .textFieldStyle(.roundedBorder)
+            .shadow(color: Color.black, radius: 5)
+            .frame(width: UIScreen.main.bounds.width-20, height:55, alignment: .topLeading)
     }
 }
 

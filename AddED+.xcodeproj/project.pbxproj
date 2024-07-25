@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E72237E82C50C5C400BFC1C0 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72237E72C50C5C400BFC1C0 /* SearchView.swift */; };
+		E73B4F632C518DCF00FDF8FF /* SavedProgramsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73B4F622C518DCF00FDF8FF /* SavedProgramsTab.swift */; };
 		E742DA0E2C4EF2D100B38B7E /* GreenHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E742DA0D2C4EF2D100B38B7E /* GreenHeader.swift */; };
 		E74C06152C50B35E004F0D38 /* WrappingHStack in Frameworks */ = {isa = PBXBuildFile; productRef = E74C06142C50B35E004F0D38 /* WrappingHStack */; };
 		E754E0AF2C4EE90900D526A1 /* UserInterests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E754E0AE2C4EE90900D526A1 /* UserInterests.swift */; };
@@ -29,9 +31,12 @@
 		F0A9CB3E2C49A779004B509A /* SearchFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A9CB3D2C49A779004B509A /* SearchFunction.swift */; };
 		F0A9CB402C49B095004B509A /* RatingStarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A9CB3F2C49B095004B509A /* RatingStarsView.swift */; };
 		F63377762C50A7E70024D2BD /* ProgramRecommendedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63377752C50A7E70024D2BD /* ProgramRecommendedView.swift */; };
+		F63775642C51A55700491F55 /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63775632C51A55700491F55 /* TagListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E72237E72C50C5C400BFC1C0 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		E73B4F622C518DCF00FDF8FF /* SavedProgramsTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedProgramsTab.swift; sourceTree = "<group>"; };
 		E742DA0D2C4EF2D100B38B7E /* GreenHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenHeader.swift; sourceTree = "<group>"; };
 		E754E0AE2C4EE90900D526A1 /* UserInterests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInterests.swift; sourceTree = "<group>"; };
 		E754E0B02C4EEAB200D526A1 /* ProgramName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramName.swift; sourceTree = "<group>"; };
@@ -54,6 +59,7 @@
 		F0A9CB3D2C49A779004B509A /* SearchFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFunction.swift; sourceTree = "<group>"; };
 		F0A9CB3F2C49B095004B509A /* RatingStarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingStarsView.swift; sourceTree = "<group>"; };
 		F63377752C50A7E70024D2BD /* ProgramRecommendedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramRecommendedView.swift; sourceTree = "<group>"; };
+		F63775632C51A55700491F55 /* TagListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,7 @@
 				E7BD348F2C4106FB00BDA300 /* ContentView.swift */,
 				E7DA68462C49C485000C7486 /* HomeScreen.swift */,
 				E742DA0D2C4EF2D100B38B7E /* GreenHeader.swift */,
+				F63775632C51A55700491F55 /* TagListView.swift */,
 				F0A9CB392C49A3FD004B509A /* ProgramView.swift */,
 				E754E0B42C4EEB0700D526A1 /* AddProgramPage.swift */,
 				E754E0B02C4EEAB200D526A1 /* ProgramName.swift */,
@@ -87,6 +94,8 @@
 				F0996F752C5188CA0040262E /* AddRatingView.swift */,
 				E754E0AE2C4EE90900D526A1 /* UserInterests.swift */,
 				F63377752C50A7E70024D2BD /* ProgramRecommendedView.swift */,
+				E73B4F622C518DCF00FDF8FF /* SavedProgramsTab.swift */,
+				E72237E72C50C5C400BFC1C0 /* SearchView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -220,14 +229,17 @@
 				F0A9CB362C49A309004B509A /* ProgramCardView.swift in Sources */,
 				F0A9CB382C49A314004B509A /* TagRectangleView.swift in Sources */,
 				E7DA68472C49C485000C7486 /* HomeScreen.swift in Sources */,
+				E73B4F632C518DCF00FDF8FF /* SavedProgramsTab.swift in Sources */,
 				E754E0B32C4EEADB00D526A1 /* ProgramInfo.swift in Sources */,
 				F63377762C50A7E70024D2BD /* ProgramRecommendedView.swift in Sources */,
+				F63775642C51A55700491F55 /* TagListView.swift in Sources */,
 				F0A9CB402C49B095004B509A /* RatingStarsView.swift in Sources */,
 				F0A9CB3A2C49A3FD004B509A /* ProgramView.swift in Sources */,
 				F025DAA92C50434400B9249E /* RatingView.swift in Sources */,
 				E742DA0E2C4EF2D100B38B7E /* GreenHeader.swift in Sources */,
 				F0996F7A2C5199A40040262E /* AddReviewStars.swift in Sources */,
 				F0996F782C5193D40040262E /* ProgramModel.swift in Sources */,
+				E72237E82C50C5C400BFC1C0 /* SearchView.swift in Sources */,
 				F0A9CB3E2C49A779004B509A /* SearchFunction.swift in Sources */,
 				E7DA68452C49C464000C7486 /* TabBar.swift in Sources */,
 				E754E0B52C4EEB0800D526A1 /* AddProgramPage.swift in Sources */,

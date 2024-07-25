@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct ProgramView: View {
-    
+    @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
     @State var displayedProgram: Program
     
     var body: some View {
-        NavigationView {
+        ZStack {
             VStack{
                 //Top green bar
                 GreenHeader()
@@ -21,6 +21,7 @@ struct ProgramView: View {
                         Spacer()
                         Text(displayedProgram.name)
                             .font(.largeTitle)
+                            .bold()
                             .padding()
                         Spacer()
                     }
@@ -32,7 +33,7 @@ struct ProgramView: View {
                                 .frame(width: 300, height: 200)
                         }
                         
-                        RatingStarsView(starCount: displayedProgram.ratingsAverageScore())
+                        RatingStarsView(programRating: ECCChicago, test: 3.7, isReview: false)
                     }
                     
                     HStack {
@@ -48,21 +49,6 @@ struct ProgramView: View {
                     }
                     .frame(width: 300, height: 200)
                     
-                    ZStack{
-                        Rectangle()
-                            .fill(.green)
-                            .frame(width:250, height:50)
-                            .cornerRadius(10)
-    //                    Text("Add a Review")
-    //                        .foregroundColor(.white)
-                        NavigationLink(destination:AddRatingView(program:displayedProgram)){
-                            Text("Add a Review")
-                                .foregroundColor(.white)
-                        }
-                        
-                            
-                    }
-                    
                     Text("Reviews")
                         .font(.title)
                     
@@ -71,25 +57,20 @@ struct ProgramView: View {
                             .fill(.green)
                             .frame(width:350)
                         VStack {
-                            ForEach(displayedProgram.ratings){
+                            ForEach(placeholderRatings){
                                 review in
                                 RatingView(review: review)
                             }
                         }
                     }
-                   
                 }
             }
             .ignoresSafeArea()
         }
+        .background(Color(red: 0.8705, green: 0.8705, blue: 0.8705))
     }
 }
 
-//#Preview {
-//    ProgramView(displayedProgram: ECCChicago)
-//}
-struct ProgramView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProgramView(displayedProgram: ECCChicago)
-    }
+#Preview {
+    ProgramView(displayedProgram: ECCChicago)
 }

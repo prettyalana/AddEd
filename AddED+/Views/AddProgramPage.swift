@@ -8,8 +8,6 @@
 
 import SwiftUI
 struct AddProgramPage: View {
-    
-    
     var body: some View {
         VStack {
             HStack {
@@ -21,7 +19,7 @@ struct AddProgramPage: View {
                 }
             label:{Image(systemName: "arrowshape.backward.fill")
                     .foregroundColor(.black)
-                
+            }
                 Spacer()
                 Text("Added+")
                     .fontWeight(.medium)
@@ -32,15 +30,13 @@ struct AddProgramPage: View {
                 .fontWeight(.medium)
                 .foregroundColor(.black)
             }
-            }
-            Spacer()
-                .frame(height:20)
+            .padding()
             ProgramName()
             ProgramInfo()
                 .padding()
             Spacer()
-                .frame(height:450)
         }
+        .background(.customBackground)
         .ignoresSafeArea()
     }
 }
