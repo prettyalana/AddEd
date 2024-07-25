@@ -54,7 +54,7 @@ struct HomeScreen: View {
                         ForEach(placeholderFeaturedPrograms) {
                             featuredProgram in
                             NavigationLink(destination:ProgramView(displayedProgram: featuredProgram)) {
-                                ProgramCardView(displayedProgram: featuredProgram, areTagsRemovable: false, paddingAmount: 20.0)
+                                ProgramCardView(displayedProgram: featuredProgram, areTagsRemovable: false, paddingAmount: 10.0)
                             }
                             
                         }
@@ -73,7 +73,7 @@ struct HomeScreen: View {
                 .cornerRadius(8)
                 displayRecommendedPrograms()
             }
-            .background(Color(red: 0.8705, green: 0.8705, blue: 0.8705))
+            .background(.customBackground)
             .ignoresSafeArea()
         }
     }
