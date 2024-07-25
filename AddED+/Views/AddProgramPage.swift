@@ -31,13 +31,10 @@ struct AddProgramPage: View {
                 .foregroundColor(.black)
             }
             .padding()
-            Spacer()
-                .frame(height:20)
             ProgramName()
             ProgramInfo()
                 .padding()
             Spacer()
-                .frame(height:450)
         }
         .background(.customBackground)
         .ignoresSafeArea()
