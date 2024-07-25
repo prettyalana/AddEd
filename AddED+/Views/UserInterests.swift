@@ -19,11 +19,6 @@ struct UserInterests: View {
                 GreenHeader()
             }
             .padding(.bottom)
-            ZStack {
-                //Button
-                Image(systemName: "arrow.left")
-            }
-            .padding(.trailing, 300)
             ScrollView {
                 Spacer()
                 //Button

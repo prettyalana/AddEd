@@ -14,14 +14,11 @@ struct TagRectangleView: View {
     var body: some View {
         if removable {
             HStack {
-                Button(action: {itemTagged.removeTag(inputTag: displayTag)}, 
-                       label: {
-                    HStack {
-                        Text(displayTag.name)
-                        Image(systemName:"x.circle")
-                    }
-                    .padding(6.0)
-                })
+                HStack {
+                    Text(displayTag.name)
+                    Image(systemName:"x.circle")
+                }
+                .padding(6.0)
                 .background(displayTag.getTypeColor())
                 .cornerRadius(8)
                 .foregroundColor(.white)
@@ -40,6 +37,8 @@ struct TagRectangleView: View {
         
     }
 }
+
+
 
 #Preview {
     TagRectangleView(displayTag: technologyTag, removable: true, itemTagged: ECCChicago)

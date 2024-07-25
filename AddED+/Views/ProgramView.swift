@@ -12,58 +12,62 @@ struct ProgramView: View {
     @State var displayedProgram: Program
     
     var body: some View {
-        VStack{
-            //Top green bar
-            GreenHeader()
-            ScrollView {
-                HStack{
-                    Spacer()
-                    Text(displayedProgram.name)
-                        .font(.largeTitle)
-                        .padding()
-                    Spacer()
-                }
-                
-                VStack {
-                    HStack {
-                        Image("Placeholder")
-                            .resizable()
-                            .frame(width: 300, height: 200)
+        ZStack {
+            VStack{
+                //Top green bar
+                GreenHeader()
+                ScrollView {
+                    HStack{
+                        Spacer()
+                        Text(displayedProgram.name)
+                            .font(.largeTitle)
+                            .bold()
+                            .padding()
+                        Spacer()
                     }
                     
-                    RatingStarsView(programRating: ECCChicago, test: 3.7, isReview: false)
-                }
-                
-                HStack {
-                    TagRectangleView(displayTag: technologyTag, removable: false, itemTagged: ECCChicago)
-                    
-                    
-                    TagRectangleView(displayTag: paidTag, removable: false, itemTagged: ECCChicago)
-                }
-                .padding(.top)
-                
-                GroupBox(label: Label("Description" , systemImage: "")) {
-                    Text(displayedProgram.description)
-                }
-                .frame(width: 300, height: 200)
-                
-                Text("Reviews")
-                    .font(.title)
-                
-                ZStack{
-                    Rectangle()
-                        .fill(.green)
-                        .frame(width:350)
                     VStack {
-                        ForEach(placeholderRatings){
-                            review in
-                            RatingView(review: review)
+                        HStack {
+                            Image("Placeholder")
+                                .resizable()
+                                .frame(width: 300, height: 200)
+                        }
+                        
+                        RatingStarsView(programRating: ECCChicago, test: 3.7, isReview: false)
+                    }
+                    
+                    HStack {
+                        TagRectangleView(displayTag: technologyTag, removable: false, itemTagged: ECCChicago)
+                        
+                        
+                        TagRectangleView(displayTag: paidTag, removable: false, itemTagged: ECCChicago)
+                    }
+                    .padding(.top)
+                    
+                    GroupBox(label: Label("Description" , systemImage: "")) {
+                        Text(displayedProgram.description)
+                    }
+                    .frame(width: 300, height: 200)
+                    
+                    Text("Reviews")
+                        .font(.title)
+                    
+                    ZStack{
+                        Rectangle()
+                            .fill(.green)
+                            .frame(width:350)
+                        VStack {
+                            ForEach(placeholderRatings){
+                                review in
+                                RatingView(review: review)
+                            }
                         }
                     }
                 }
             }
+            .ignoresSafeArea()
         }
-        .ignoresSafeArea()
+        .background(Color(red: 0.8705, green: 0.8705, blue: 0.8705))
     }
 }
 

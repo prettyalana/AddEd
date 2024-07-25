@@ -75,6 +75,7 @@ struct User {
     var email: String
     var password: String
     var savedPrograms: [Int]
+    var profilePicture: String = "profileImage"
     
     
     func programHasInterests(program: Program) -> Bool {
