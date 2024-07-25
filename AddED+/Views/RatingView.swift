@@ -40,7 +40,7 @@ struct RatingView: View {
                             .font(.subheadline)
                             .bold()
                         
-                        RatingStarsView(programRating: ECCChicago, test: 4, isReview: true)
+                        RatingStarsView(starCount:review.starCount)
                     }
                     
                     

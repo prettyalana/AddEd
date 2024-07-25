@@ -9,11 +9,19 @@ import Foundation
 import SwiftUI
 
 struct Rating: Identifiable{
-    var program: Program
     var starCount: Int
     var title: String
     var description: String
     let id = UUID()
+    init(starCount: Int, title: String, description: String) {
+        self.starCount = starCount
+        self.title = title
+        self.description = description
+    }
+}
+
+class publicRatingValue: ObservableObject {
+    @Published var starCount = 0
 }
 
 class Program: Identifiable {
@@ -60,10 +68,15 @@ class Program: Identifiable {
     
     func ratingsAverageScore() -> Int {
         var sum = 0
+        var numRatings = ratings.count
+        if numRatings == 0 {
+            numRatings = 1
+        }
         for i in ratings {
             sum += i.starCount
         }
-        return sum
+        
+        return sum / numRatings
     }
     
 }
@@ -115,6 +128,11 @@ class Tag: Identifiable {
     }
     
 }
+var ECCReviewOne = Rating(starCount: 1, title: "Great Program!!!", description: "This program taught me how to code!")
+var ECCReviewTwo = Rating(starCount: 5, title: "Great Program!!!", description: "This program taught me how to code!")
+var ECCReviewThree = Rating(starCount: 4, title: "Great Program!!!", description: "This program taught me how to code!")
+var placeholderRatings = [ECCReviewOne, ECCReviewTwo,ECCReviewThree]
+
 
 let technologyTag = Tag(inputName: "Technology", inputType: "Tech")
 let paidTag = Tag(inputName: "$ Paid Internship", inputType: "Paid")
@@ -131,7 +149,7 @@ let volunteerTag = Tag(inputName: "Volunteer", inputType: "Volunteer")
 var placeholderTags: [Tag] = [technologyTag, paidTag, artsTag, sportsTag, civicTag]
 var inputTag: [Tag] = [businessTag, researchTag, volunteerTag]
 
-var ECCChicago = Program(inputName: "Everyone Can Code Chicago", inputDescription: "The Everyone Can Code Chicago initiative was launched as a public-private partnership that expands opportunities for youth to develop coding skills and explore career pathways.  Through this initiative, employees at local businesses share their professional experience with youth.  And the youth have the opportunity to gain work experience through internships.", inputTime: "2:00 PM - 5:00 PM", inputDays: "Weekdays 06/24/2024-8/02/2024", inputPlace: "Truman College", isVerified: true, ratingsArray: [], tagsArray: [technologyTag, paidTag], idNumber: 1)
+var ECCChicago = Program(inputName: "Everyone Can Code Chicago", inputDescription: "The Everyone Can Code Chicago initiative was launched as a public-private partnership that expands opportunities for youth to develop coding skills and explore career pathways.  Through this initiative, employees at local businesses share their professional experience with youth.  And the youth have the opportunity to gain work experience through internships.", inputTime: "2:00 PM - 5:00 PM", inputDays: "Weekdays 06/24/2024-8/02/2024", inputPlace: "Truman College", isVerified: true, ratingsArray: [ECCReviewOne,ECCReviewTwo,ECCReviewThree], tagsArray: [technologyTag, paidTag], idNumber: 1)
 var afterSchoolMatters = Program(inputName: "After School Matters", inputDescription: "After School Matters inspires Chicago’s teens to discover their passions, develop skills for life beyond high school, and make friends along the way.", inputTime: "", inputDays: "07/16/2024-07/16/2025", inputPlace: "Chicago, Il", isVerified: true, ratingsArray: [], tagsArray: [technologyTag, paidTag], idNumber: 2)
 var cyberSecurityProgram = Program(inputName: "Intro to Cybersecurity", inputDescription: "Program Info", inputTime: "07/25/24",inputDays: "08/25/24", inputPlace: "Chicago, IL", isVerified: true, ratingsArray: [], tagsArray: [technologyTag, paidTag], idNumber: 3)
 var webDevProgram = Program(inputName: "Intro to Web Development", inputDescription: "After School Matters inspires Chicago’s teens to discover their passions, develop skills for life beyond high school, and make friends along the way.", inputTime: "07/25/24",inputDays: "08/25/24", inputPlace: "Chicago, IL", isVerified: true, ratingsArray: [], tagsArray: [technologyTag, paidTag], idNumber: 4)
@@ -142,7 +160,3 @@ var savedPrograms: [Program] = [ECCChicago, cyberSecurityProgram]
 
 var currentUser = User(name: "John Doe", username: "johndoe", interests: ["Technology"], email: "johndoe@example.com", password: "example", savedPrograms: [1, 3])
 
-var ECCReviewOne = Rating(program: ECCChicago, starCount: 4, title: "Great Program!!!", description: "This program taught me how to code!")
-var ECCReviewTwo = Rating(program: ECCChicago, starCount: 4, title: "Great Program!!!", description: "This program taught me how to code!")
-var ECCReviewThree = Rating(program: ECCChicago, starCount: 4, title: "Great Program!!!", description: "This program taught me how to code!")
-var placeholderRatings = [ECCReviewOne, ECCReviewTwo,ECCReviewThree]
