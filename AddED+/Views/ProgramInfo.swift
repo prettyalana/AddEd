@@ -16,7 +16,7 @@ struct ProgramInfo: View {
         ZStack {
             Rectangle()
                 .fill(.white)
-                .frame(width: 380, height: 200)
+                .frame(width: UIScreen.main.bounds.width-20, height: 200)
                 .cornerRadius(10)
                 .shadow(color: Color.black, radius: 5)
             VStack{
@@ -39,6 +39,7 @@ struct ProgramInfo: View {
                     .textFieldStyle(.roundedBorder)
                     .truncationMode(.tail)
                     .frame(width: 350)
+                //tags, but idk how
             }
         }
     }

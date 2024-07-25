@@ -8,42 +8,39 @@
 
 import SwiftUI
 struct AddProgramPage: View {
-
     var body: some View {
-        NavigationView{
-            VStack {
-                HStack {
-                    GreenHeader()
+        VStack {
+            HStack {
+                GreenHeader()
+            }
+            HStack{
+                Button{
+                    //action to homescreen on previous page
                 }
-                HStack{
-                    HStack{
-                        NavigationLink(destination:HomeScreen()){
-                        label:do {Image(systemName: "arrowshape.backward.fill")
-                                .foregroundColor(.black)
-                        }
-                        }
-                    }
-                    Spacer()
-                    Text("Added+")
-                        .fontWeight(.medium)
-                        .foregroundColor(.black)
-                    Spacer()
-                    Button("Post") {
-                    }
+            label:{Image(systemName: "arrowshape.backward.fill")
+                    .foregroundColor(.black)
+            }
+                Spacer()
+                Text("Added+")
                     .fontWeight(.medium)
                     .foregroundColor(.black)
-                    .background(Color.green)
-                }
-                
-                .padding()
                 Spacer()
-                    .frame(height:20)
-                ProgramName()
-                ProgramInfo()
+                Button("Post") {
+                }
+                .fontWeight(.medium)
+                .foregroundColor(.black)
             }
             .padding()
-            .ignoresSafeArea()
+            Spacer()
+                .frame(height:20)
+            ProgramName()
+            ProgramInfo()
+                .padding()
+            Spacer()
+                .frame(height:450)
         }
+        .background(.customBackground)
+        .ignoresSafeArea()
     }
 }
 #Preview {

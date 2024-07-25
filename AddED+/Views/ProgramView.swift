@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProgramView: View {
-    
+    @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
     @State var displayedProgram: Program
     
     var body: some View {
@@ -71,11 +71,6 @@ struct ProgramView: View {
     }
 }
 
-//#Preview {
-//    ProgramView(displayedProgram: ECCChicago)
-//}
-struct ProgramView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProgramView(displayedProgram: ECCChicago)
-    }
+#Preview {
+    ProgramView(displayedProgram: ECCChicago)
 }

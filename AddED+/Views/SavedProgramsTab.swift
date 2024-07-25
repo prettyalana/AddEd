@@ -38,8 +38,10 @@ struct SavedProgramsTab: View {
                     .ignoresSafeArea()
                 }
             }
-        }
+        .background(.customBackground)
+        .ignoresSafeArea()
     }
+}
 
 
 #Preview {
