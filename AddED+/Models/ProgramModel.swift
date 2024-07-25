@@ -123,6 +123,7 @@ let paidTag = Tag(inputName: "$ Paid Internship", inputType: "Paid")
 let artsTag = Tag(inputName: "Arts", inputType: "Arts")
 let sportsTag = Tag(inputName: "Sports", inputType: "Sports")
 let civicTag = Tag(inputName: "Civic Engagement", inputType: "Civic Engagement")
+let culinaryTag = Tag(inputName: "Culinary", inputType: "Culinary")
 
 // Sample input tags
 let businessTag = Tag(inputName: "Business", inputType: "Business")
@@ -134,7 +135,7 @@ var placeholderTags: [Tag] = [technologyTag, paidTag, artsTag, sportsTag, civicT
 var inputTag: [Tag] = [businessTag, researchTag, volunteerTag]
 
 var ECCChicago = Program(inputName: "Everyone Can Code Chicago", inputDescription: "The Everyone Can Code Chicago initiative was launched as a public-private partnership that expands opportunities for youth to develop coding skills and explore career pathways.  Through this initiative, employees at local businesses share their professional experience with youth.  And the youth have the opportunity to gain work experience through internships.", inputTime: "2:00 PM - 5:00 PM", inputDays: "Weekdays 06/24/2024-8/02/2024", inputPlace: "Truman College", isVerified: true, ratingsArray: [], tagsArray: [technologyTag, paidTag], idNumber: 1, imageID: "ECC")
-var afterSchoolMatters = Program(inputName: "After School Matters", inputDescription: "After School Matters inspires Chicago’s teens to discover their passions, develop skills for life beyond high school, and make friends along the way.", inputTime: "", inputDays: "07/16/2024-07/16/2025", inputPlace: "Chicago, Il", isVerified: true, ratingsArray: [], tagsArray: [technologyTag, paidTag], idNumber: 2, imageID:"afterSchoolMatters")
+var afterSchoolMatters = Program(inputName: "After School Matters", inputDescription: "After School Matters inspires Chicago’s teens to discover their passions, develop skills for life beyond high school, and make friends along the way.", inputTime: "", inputDays: "07/16/2024-07/16/2025", inputPlace: "Chicago, Il", isVerified: true, ratingsArray: [], tagsArray: [technologyTag, artsTag, culinaryTag, paidTag], idNumber: 2, imageID:"afterSchoolMatters")
 var cyberSecurityProgram = Program(inputName: "Intro to Cybersecurity", inputDescription: "Program Info", inputTime: "07/25/24",inputDays: "08/25/24", inputPlace: "Chicago, IL", isVerified: true, ratingsArray: [], tagsArray: [technologyTag, paidTag], idNumber: 3, imageID:"Placeholder")
 var webDevProgram = Program(inputName: "Intro to Web Development", inputDescription: "After School Matters inspires Chicago’s teens to discover their passions, develop skills for life beyond high school, and make friends along the way.", inputTime: "07/25/24",inputDays: "08/25/24", inputPlace: "Chicago, IL", isVerified: true, ratingsArray: [], tagsArray: [technologyTag, paidTag], idNumber: 4, imageID:"Placeholder")
 
