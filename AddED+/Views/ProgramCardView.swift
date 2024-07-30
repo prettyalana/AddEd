@@ -60,6 +60,11 @@ struct ProgramCardView: View {
                             .foregroundColor(.blue)
                             .font(.system(size:24))
                     }
+                    else {
+                        Image(systemName: "bookmark")
+                            .foregroundColor(.blue)
+                            .font(.system(size:24))
+                    }
                     
                 }
                 .padding(.all, 8.0)
