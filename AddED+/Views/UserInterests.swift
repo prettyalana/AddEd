@@ -11,7 +11,8 @@ import WrappingHStack
 struct UserInterests: View {
     var tags: [Tag] = placeholderTags
     var inputTags: [Tag] = inputTag
-    //    @State var addedTag: Bool
+    @State private var totalHeight
+              = CGFloat.zero
     
     var body: some View {
         VStack {
@@ -56,7 +57,7 @@ struct UserInterests: View {
                 ZStack {
                     Rectangle()
                         .fill(.addED)
-                        .frame(width:200, height: 80)
+                        .frame(width:200, height: 70)
                         .cornerRadius(8)
                     Text("Next")
                         .foregroundColor(.white)
@@ -72,10 +73,3 @@ struct UserInterests: View {
 #Preview {
     UserInterests()
 }
-
-//            if !addedTag {
-//                  forEach(inputTags) {
-// tag in
-//TagRectangleView(displayTag: tag, removable: true)
-// }
-//            }
